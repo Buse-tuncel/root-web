@@ -1,0 +1,7 @@
+AddType application/xml .xml
+AddCharset UTF-8 .xml
+
+<Files "sitemap.xml">
+    ForceType application/xml
+    Header set Content-Type "application/xml; charset=utf-8"
+</Files> 
