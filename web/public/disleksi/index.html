@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disleksi</title>
+    <base href="/">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="footer.css">
+    <script defer src="footer.js"></script>
+    <link rel="stylesheet" href="navbar.css">
+    <script defer src="navbar.js"></script>
+    <style>
+
+ 
+
+.body-content {
+    margin-top: 80px; /* Menünün altında 80px boşluk bırakır */
+    padding: 20px;
+}
+        body {
+            font-family: 'Nunito', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #333;
+        }
+        .hero {
+            position: relative;
+            height: 100px;
+            background: url('aphasia1.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            font-size: 2.5em;
+            font-weight: bold;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .spacer {
+            height: 50px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in-out;
+            color: #333;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        h2 {
+            color: #2C5282;
+            position: relative;
+            padding-left: 15px;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+        h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 5px;
+            background: linear-gradient(to bottom, #2C5282, #90CDF4);
+            border-radius: 3px;
+        }
+        h3 {
+            color: #2C5282;
+            position: relative;
+            padding-left: 15px;
+            font-size: 1.5em;
+            margin: 25px 0 15px;
+        }
+        h3::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background: linear-gradient(to bottom, #2C5282, #90CDF4);
+            border-radius: 3px;
+        }
+        p {
+            line-height: 1.8;
+            font-size: 1.1em;
+            color: #333;
+        }
+        .image-section {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .image-section img {
+            width: 45%;
+            margin: 0 10px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .image-section img:hover {
+            transform: scale(1.05);
+        }
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            background: #2C5282;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 700;
+            transition: all 0.3s;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-right: 10px;
+        }
+        .button:hover {
+            background: #90CDF4;
+            color: #2C5282;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"> <img src="images/logo.png" alt=""></div>
+        <ul class="nav-links">
+            <li><a href="/">Anasayfa</a></li>
+            <li><a href="hakkimizda/">Hakkımızda</a></li>
+            <li><a href="hizmetler/">Hizmetler</a></li>
+            <li><a href="iletisim/">İletişim</a></li>            
+        </ul>
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+    </nav>
+
+    <br>
+
+
+    <div class="hero">Öğrenme Güçlükleri Hakkında</div>
+    <div class="spacer"></div>
+    <div class="container">
+        <h2>Öğrenme Güçlükleri Nedir?</h2>
+        <p>
+            Öğrenme güçlüğü, bireyin okuma, yazma, matematik veya dil becerilerinde beklenen seviyenin altında performans göstermesiyle karakterize edilen nörogelişimsel bir durumdur. Zekâ düzeyi normal veya üzeri olmasına rağmen, bu bireyler akademik becerileri edinmede zorluk yaşayabilirler. Öğrenme güçlüğü disleksi (okuma güçlüğü), disgrafi (yazma güçlüğü) ve diskalkuli (matematik güçlüğü) gibi alt gruplara ayrılır. 
+        </p>
+        <p><strong>Dil ve konuşma terapisi (DKT), öğrenme güçlükleri olan çocuklarda okuma, yazma ve dil becerilerini güçlendirmek için kritik bir rol oynar.</strong></p>
+        <div class="image-section">
+            <img src="images/disleksi.jpg" alt="Kekemelik">
+            <img src="images/disleksi1.jpg" alt="Beyin ve Konuşma">
+        </div>
+        <h2>Dil ve Konuşma Terapisinin Öğrenme Güçlüğündeki Önemi</h2>
+        <p>Öğrenme güçlüğü olan çocuklar dil işleme, fonolojik farkındalık, işitsel işlemleme, fonem-grafem eşleştirme (ses-harf eşleştirme) gibi alanlarda zorluk yaşayabilir. Dil-konuşma terapistleri, bu becerileri geliştirmek için çeşitli teknikler kullanarak çocuğun akademik ve günlük yaşamda daha bağımsız olmasına yardımcı olur.</p>
+        
+
+        <h3>Disleksi ve Dil-Konuşma Terapisi</h3>
+        <p>Disleksi, bireyin harfleri ve kelimeleri tanıma, okuma akıcılığı ve okuduğunu anlama becerilerinde zorluk yaşamasına neden olan bir öğrenme güçlüğüdür. Dil ve konuşma terapistleri, disleksi ile mücadelede şu yöntemleri kullanır:</p>
+        <li> <strong>Fonolojik Farkındalık Çalışmaları</strong> <br>
+            💡 Kelimeleri seslere ayırma, heceleme ve sesleri tanıma becerilerini geliştirir.</li>
+        <li> <strong>Sesbilgisel İşleme Çalışmaları</strong> <br>
+            💡 Harf-ses eşleştirmesi ve kelime tanıma becerilerini artırır.</li>
+        <li> <strong>Anlamlandırma ve Kelime Bilgisi Geliştirme</strong> <br>
+            💡 Okuduğunu anlama ve kelime dağarcığını genişletmeye yardımcı olur.</li>
+        <li> <strong>Okuma Akıcılığı Çalışmaları</strong> <br>
+            💡 Tekrarlı okuma ve ritmik egzersizlerle okuma hızını ve doğruluğunu artırır.</li>
+        
+        <h3>Öğrenme Güçlüklerinde KullandığımızTerapi Yöntemleri</h3>
+        <li> <strong>Fonolojik Farkındalık Eğitimi</strong> <br>
+            💡 Sesleri ayırt etme, heceleme ve sesleri birleştirme becerilerini destekler.</li>
+        <li> <strong>Dil İşleme ve Anlama Çalışmaları</strong> <br>
+            💡 Okuduğunu anlama, cümle yapılarını analiz etme ve dilbilgisi becerilerini güçlendirir.</li>
+        <li> <strong>Sözel ve Yazılı Dil Çalışmaları</strong> <br>
+            💡 Kelime bilgisini artırma, yazılı anlatımı geliştirme ve anlatım becerilerini destekleme.</li>
+        <li> <strong> Hikâye Anlatımı ve Özetleme Çalışmaları</strong> <br>
+            💡 Çocuğun okuma-anlama ve anlatım becerilerini geliştirmeye yardımcı olur.</li>
+        <li> <strong>Görsel Destekler ve Çoklu Duyusal Öğrenme Teknikleri</strong> <br>
+            💡 Harfleri, sesleri ve kelimeleri anlamlandırmak için görsel ipuçları ve işitsel destekler kullanılır.</li>
+
+        <h3>Dil ve Konuşma Terapisinin Öğrenme Güçlüğü Olan Çocuklara Katkıları</h3>
+        <br>
+✔️ Okuma ve yazma becerilerinde ilerleme <br>
+✔️ Daha iyi ses farkındalığı ve harf-ses eşleştirme becerisi <br>
+✔️ Kelimeleri daha kolay hatırlama ve anlama yeteneği <br>
+✔️ Akademik başarıda artış ve özgüven kazanımı <br>
+
+        <p>
+            Öğrenme güçlüğü olan çocuklar, erken dönemde uygun müdahale aldıklarında akademik ve sosyal yaşantılarında önemli gelişmeler kaydedebilirler. Dil ve konuşma terapisi, özellikle disleksi gibi dil temelli öğrenme güçlüklerinde kritik bir rol oynar ve çocuğun dil becerilerini güçlendirmek için kanıta dayalı yöntemler kullanır.
+        </p>
+        <p><strong>Çocuğunuzda öğrenme güçlüğü belirtileri gözlemliyorsanız, erken müdahale için bizimle iletişime geçebilirsiniz!</strong></p>
+        
+        <button class="button" onclick="scrollToTop()">Yukarı Çık</button>
+        <a href="index.html" class="button">Ana Sayfaya Dön</a>
+    </div>
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+    <div class="spacer"></div>
+    <div class="spacer"></div>
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Down Sendromu</title>
+    <base href="/">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="footer.css">
+    <script defer src="footer.js"></script>
+    <link rel="stylesheet" href="navbar.css">
+    <script defer src="navbar.js"></script>
+    <style>
+      
+
+
+  
+
+.body-content {
+    margin-top: 80px; /* Menünün altında 80px boşluk bırakır */
+    padding: 20px;
+}
+        body {
+            font-family: 'Nunito', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #333;
+        }
+        .hero {
+            position: relative;
+            height: 100px;
+            background: url('aphasia1.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            font-size: 2.5em;
+            font-weight: bold;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .spacer {
+            height: 50px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in-out;
+            color: #333;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        h2 {
+            color: #2C5282;
+            position: relative;
+            padding-left: 15px;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+        h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 5px;
+            background: linear-gradient(to bottom, #2C5282, #90CDF4);
+            border-radius: 3px;
+        }
+        h3 {
+            color: #2C5282;
+            position: relative;
+            padding-left: 15px;
+            font-size: 1.5em;
+            margin: 25px 0 15px;
+        }
+        h3::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background: linear-gradient(to bottom, #2C5282, #90CDF4);
+            border-radius: 3px;
+        }
+        p {
+            line-height: 1.8;
+            font-size: 1.1em;
+            color: #333;
+        }
+        .image-section {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .image-section img {
+            width: 45%;
+            margin: 0 10px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .image-section img:hover {
+            transform: scale(1.05);
+        }
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            background: #2C5282;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 700;
+            transition: all 0.3s;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-right: 10px;
+        }
+        .button:hover {
+            background: #90CDF4;
+            color: #2C5282;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"> <img src="images/logo.png" alt=""></div>
+        <ul class="nav-links">
+            <li><a href="/">Anasayfa</a></li>
+            <li><a href="hakkimizda/">Hakkımızda</a></li>
+            <li><a href="hizmetler/">Hizmetler</a></li>
+            <li><a href="iletisim/">İletişim</a></li>            
+        </ul>
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+    </nav>
+    <br>
+
+
+    <div class="hero">Down Sendromu Hakkında</div>
+    <div class="spacer"></div>
+    <div class="container">
+        <h2>Down Sendromu Nedir?</h2>
+        <p>
+            Down sendromu, bireyin hücrelerinde fazladan bir 21. kromozomun bulunmasıyla ortaya çıkan genetik bir durumdur. Bu durum, bireyin fiziksel gelişimini, bilişsel yetilerini ve dil-konuşma becerilerini etkileyebilir. Ancak erken müdahale, bireyin iletişim becerilerini geliştirmesi ve bağımsız yaşama becerileri kazanması açısından kritik bir rol oynar.        </p>
+        <div class="image-section">
+            <img src="images/down.jpg" alt="Down Sendromu">
+            <img src="images/down1.jpg" alt="Beyin ve Konuşma">
+        </div>
+        <h2>Down Sendromlu Bireylerde Dil ve Konuşma Gelişimi</h2>
+        <h3>Down sendromlu çocukların dil ve konuşma gelişiminde genellikle şu farklılıklar görülür:</h3>
+        <li> <strong>Konuşma Gecikmesi:</strong> İlk kelimelerin ortaya çıkışı akranlarına kıyasla daha geç olabilir.</li>
+        <li> <strong>Fonolojik Zorluklar:</strong> Sesleri doğru bir şekilde çıkarmakta güçlük yaşayabilirler.</li>
+        <li> <strong>Zayıf Kas Tonusu (Hipotoni):</strong> Ağız ve yüz kaslarının düşük kas tonusu nedeniyle konuşma netliği etkilenebilir.</li>
+        <li> <strong>İşitsel İşleme Güçlükleri:</strong> Duyduklarını anlamlandırma ve kelimeleri doğru bir şekilde ayırt etmede zorlanabilirler.</li>
+        <li> <strong>Alıcı Dil Becerileri:</strong> Genellikle anlama becerileri, ifade edici dil becerilerinden daha iyidir.</li>
+        <br>
+        <p><strong>Down sendromlu çocuklar, erken ve yoğun dil-konuşma terapisi ile iletişim becerilerini önemli ölçüde geliştirebilirler.</strong></p>
+
+        <h3>Down Sendromunda Dil ve Konuşma Terapisi Yöntemleri</h3>
+        <p>Dil ve konuşma terapisi, Down sendromlu bireylerin iletişim kurma yetilerini güçlendirmeye yönelik çeşitli yöntemleri içerir.</p>
+        <li> <strong>Alternatif ve Destekleyici İletişim (AAC)</strong>
+        Görsel destekler, işaret dili ve resimli kartlar kullanılarak iletişimi artırma.Göz teması ve jest kullanımını teşvik etme.</li>
+        <li> <strong>Oral Motor Terapisi</strong>
+        Dil, dudak ve çene kaslarını güçlendirme çalışmaları.Beslenme ve konuşma için ağız kaslarının koordinasyonunu artırma.</li>
+        <li> <strong>Fonolojik ve Artikülasyon Terapisi</strong>
+        Konuşma seslerinin doğru üretilmesini destekleyen egzersizler.
+        Sıklıkla yanlış üretilen seslerin farkındalığını artırma.</li>
+        <li> <strong>Erken Dil Gelişimi İçin Oyun Tabanlı Yaklaşımlar</strong>
+        Floortime ve oyun terapisi ile iletişim fırsatlarını artırma.
+        Sıra alma, taklit ve karşılıklı iletişim becerilerini geliştirme.</li>
+        <li> <strong>İşitsel ve Sözel Gelişim Çalışmaları</strong>
+        Sesleri ayırt etme ve kelime dağarcığını genişletme çalışmaları.
+        Şarkılar, ritmik oyunlar ve hikâye anlatımı ile işitsel dikkati artırma.</li>
+
+        
+        <h3>Dil ve Konuşma Terapisinin Down Sendromlu Bireylere Katkıları</h3>
+        <br>
+✔️ Daha net ve anlaşılır konuşma <br>
+✔️ Gelişmiş kelime dağarcığı ve cümle kurma becerileri <br>
+✔️ Sosyal etkileşimde daha fazla güven ve iletişim isteği <br>
+✔️ Bağımsız yaşam için gerekli dil ve iletişim becerilerinin kazanımı <br>
+
+<p>Down sendromlu bireyler, erken ve düzenli dil-konuşma terapisi ile iletişim becerilerini geliştirebilir ve günlük yaşamda daha bağımsız hale gelebilirler. Her çocuğun iletişim tarzı farklıdır ve terapi süreci bireyin ihtiyaçlarına göre şekillendirilmelidir.</p>
+<p><strong>Eğer çocuğunuzun dil ve konuşma becerilerini desteklemek istiyorsanız, bizler ile  görüşerek uygun terapi yöntemlerini keşfedebilirsiniz!</strong></p>
+
+       
+        <button class="button" onclick="scrollToTop()">Yukarı Çık</button>
+        <a href="index.html" class="button">Ana Sayfaya Dön</a>
+    </div>
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+    <div class="spacer"></div>
+    <div class="spacer"></div>
+</body>
+</html>
+

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afazi </title>
+    <base href="/">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="footer.css">
+    <script defer src="footer.js"></script>
+    <link rel="stylesheet" href="navbar.css">
+    <script defer src="navbar.js"></script>
+    <style>
+        .body-content {
+            margin-top: 80px;
+            padding: 20px;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #333;
+        }
+
+        .hero {
+            position: relative;
+            height: 100px;
+            background: url('aphasia1.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            font-size: 2.5em;
+            font-weight: bold;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .spacer {
+            height: 50px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in-out;
+            color: #333;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            color: #2C5282;
+            position: relative;
+            padding-left: 15px;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+
+        h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 5px;
+            background: linear-gradient(to bottom, #2C5282, #90CDF4);
+            border-radius: 3px;
+        }
+
+        h3 {
+            color: #2C5282;
+            position: relative;
+            padding-left: 15px;
+            font-size: 1.5em;
+            margin: 25px 0 15px;
+        }
+
+        h3::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background: linear-gradient(to bottom, #2C5282, #90CDF4);
+            border-radius: 3px;
+        }
+
+        p {
+            line-height: 1.8;
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        .image-section {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .image-section img {
+            width: 45%;
+            margin: 0 10px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .image-section img:hover {
+            transform: scale(1.05);
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            background: #2C5282;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 700;
+            transition: all 0.3s;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-right: 10px;
+        }
+
+        .button:hover {
+            background: #90CDF4;
+            color: #2C5282;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        strong {
+            color: #2C5282;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"> <img src="images/logo.png" alt=""></div>
+        <ul class="nav-links">
+            <li><a href="/">Anasayfa</a></li>
+            <li><a href="hakkimizda/">Hakkımızda</a></li>
+            <li><a href="hizmetler/">Hizmetler</a></li>
+            <li><a href="iletisim/">İletişim</a></li>            
+        </ul>
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+    </nav>
+    <br>
+
+
+    <div class="hero">Afazi Hakkında</div>
+    <div class="spacer"></div>
+    <div class="container">
+        <h2>Afazi Nedir?</h2>
+        <p>
+            Afazi, beynin dil ve konuşma işlevlerini yöneten bölgelerinde meydana gelen hasar sonucu oluşan edinilmiş bir dil bozukluğudur. Bu durum, bireyin konuşma, anlama, okuma ve yazma gibi dilsel becerilerini etkileyebilir. Afazi genellikle inme (felç), kafa travması, beyin tümörleri, nörodejeneratif hastalıklar veya beyin enfeksiyonları sonucu ortaya çıkar.
+        </p>
+        <div class="image-section">
+            <img src="images/aphasia.jpg" alt="Kekemelik">
+            <img src="images/aphasia1.jpg" alt="Beyin ve Konuşma">
+        </div>
+        <h2>Afazinin Sebepleri</h2>
+        <h3>1. Serebrovasküler Hastalıklar (İnme)</h3>
+        <li>Afazinin en yaygın nedeni iskemik veya hemorajik inmelerdir.</li>
+        <li>İskemik inme, beyine giden kan akışının tıkanmasıyla oluşur.</li>
+        <li>Hemorajik inme, beyinde kanama meydana gelmesiyle oluşur.</li>
+        <li>İnme sonucu sol hemisferdeki dil bölgeleri (Broca ve Wernicke alanları) hasar görürse afazi gelişebilir.</li>
+
+        <h3>2. Kafa Travması</h3>
+        <li>Trafik kazaları, düşmeler veya darbeler nedeniyle meydana gelebilir.</li>
+        <li>Beyin dokusunda yaygın aksonal hasar oluşabilir.</li>
+        <li>Dil becerileri, hasarın yerine ve şiddetine bağlı olarak etkilenir.</li>
+        
+        <h3>3. Beyin Tümörleri</h3>
+        <li>Beyinde büyüyen tümörler, sol temporal veya frontal loblarda baskıya neden olarak afaziye yol açabilir.</li>
+        <li>Tümörün büyüklüğüne ve yerine bağlı olarak prognoz değişkenlik gösterebilir.</li>
+
+        <h3>4. Nörodejeneratif Hastalıklar</h3>
+        <li>Primer Progresif Afazi (PPA): Dil becerilerinde ilerleyici kayıpla karakterizedir. Alzheimer, frontotemporal demans gibi hastalıklarla ilişkilidir.</li>
+
+        <p>
+           <h2>Afazide Dil ve Konuşma Terapisi ve Nöroplastisite</h2>
+           <p>Afazinin akut dönemi, hasardan sonraki ilk ayları (6 ay) kapsayan dönemdir. Bu dönem, dil terapisine başlamak için kritik bir zamandır. Erken müdahale, beynin kendini yeniden organize etme kapasitesini (nöroplastisiteyi) artırarak dil becerilerinin daha hızlı iyileşmesine yardımcı olabilir.
+
+            Akut dönemde dil terapisi şunları hedefler:
+            <li> Kişinin mevcut dil becerilerini değerlendirmek ve korumak</li>
+            <li> Beyindeki sağlam bağlantıları güçlendirmek</li>
+            <li> Alternatif iletişim yöntemleri geliştirmek (jestler, yazılı veya görsel destekler)</li>
+            <li> Kaybolan dil becerilerini geri kazanmaya yardımcı olmak</li>
+            <li> Psikolojik ve sosyal desteği sağlamak</p>
+
+        </p>
+        <h2>Afazi Tedavisinde Kullanılan Yöntemler</h2>
+        <p>
+            <ul>
+                <li>VNeST (Verb Network Strengthening Treatment)</li>
+                <li>CILT (Constraint-Induced Language Therapy)</li>
+                <li>SFA (Semantic Feature Analysis)</li>
+                <li>PCA (Phonological Component Analysis)</li>
+                <li>MIT (Melodic Intonation Therapy)</li>
+                <li>PACE (Promoting Aphasics' Communicative Effectiveness)</li>
+                <li>ORLA (Oral Reading for Language in Aphasia)</li>
+                <li>RET (Response Elaboration Training)</li>
+                <li>Script Training</li>
+                <li>AAC (Augmentative and Alternative Communication)</li>
+            </ul>
+            
+        </p>
+        <button class="button" onclick="scrollToTop()">Yukarı Çık</button>
+        <a href="index.html" class="button">Ana Sayfaya Dön</a>
+    </div>
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+    <div class="spacer"></div>
+    <div class="spacer"></div>
+</body>
+</html>

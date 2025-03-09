@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ses Bozuklukları</title>
+    <base href="/">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="footer.css">
+    <script defer src="footer.js"></script>
+    <link rel="stylesheet" href="navbar.css">
+    <script defer src="navbar.js"></script>
+    <style>
+       
+
+/* Mobil Menü İçin Hamburger Butonu */
+.menu-toggle {
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+/* Mobil Menü */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #5f9e5d;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+/* Menüden sonra boşluk bırak */
+.navbar {
+    height: 80px; /* Menünün yüksekliği */
+    line-height: 80px;
+}
+
+.body-content {
+    margin-top: 80px; /* Menünün altında 80px boşluk bırakır */
+    padding: 20px;
+}
+        body {
+            font-family: 'Nunito', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #333;
+        }
+        .hero {
+            position: relative;
+            height: 100px;
+            background: url('aphasia1.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            font-size: 2.5em;
+            font-weight: bold;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .spacer {
+            height: 50px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in-out;
+            color: #333;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        h2 {
+            color: #2C5282;
+            position: relative;
+            padding-left: 15px;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+        h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 5px;
+            background: linear-gradient(to bottom, #2C5282, #90CDF4);
+            border-radius: 3px;
+        }
+        h3 {
+            color: #2C5282;
+            position: relative;
+            padding-left: 15px;
+            font-size: 1.5em;
+            margin: 25px 0 15px;
+        }
+        h3::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background: linear-gradient(to bottom, #2C5282, #90CDF4);
+            border-radius: 3px;
+        }
+        p {
+            line-height: 1.8;
+            font-size: 1.1em;
+            color: #333;
+        }
+        .image-section {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .image-section img {
+            width: 45%;
+            margin: 0 10px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .image-section img:hover {
+            transform: scale(1.05);
+        }
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            background: #2C5282;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 700;
+            transition: all 0.3s;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-right: 10px;
+        }
+        .button:hover {
+            background: #90CDF4;
+            color: #2C5282;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"> <img src="images/logo.png" alt=""></div>
+        <ul class="nav-links">
+            <li><a href="/">Anasayfa</a></li>
+            <li><a href="hakkimizda/">Hakkımızda</a></li>
+            <li><a href="hizmetler/">Hizmetler</a></li>
+            <li><a href="iletisim/">İletişim</a></li>            
+        </ul>
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+    </nav>
+    <br>
+    <div class="hero">Ses Bozuklukları Hakkında</div>
+    <div class="spacer"></div>
+    <div class="container">
+        <h2>Ses Bozuklukları Nedir?</h2>
+        <p>
+            Ses bozuklukları, sesin perdesi, şiddeti veya kalitesindeki anormallikler nedeniyle iletişimi olumsuz yönde etkileyen durumlardır. Bu bozukluklar, kişinin yaşına, cinsiyetine veya kültürel normlarına uygun olmayan ses özellikleri sergilemesiyle karakterizedir. Ses bozuklukları genellikle üç ana kategoriye ayrılır:        </p>
+        <div class="image-section">
+            <img src="images/ses.jpg" alt="Kekemelik">
+            <img src="images/ses1.jpg" alt="Beyin ve Konuşma">
+        </div>
+        <h2>Ses Bozukluklarının Nedenleri Nelerdir?</h2>
+        <h3>Fonksiyonel Nedenler</h3>
+        <li><strong>Sesin Yanlış veya Aşırı Kullanımı:</strong> Bağırmak, yüksek sesle konuşmak veya uzun süreli konuşma gibi davranışlar, ses tellerinde zorlanmaya yol açabilir.</li>
+        <li><strong>Yanlış Ses Kullanımı:</strong> Uygun olmayan nefes kontrolü veya ses üretim teknikleri, ses tellerine zarar verebilir.</li>
+        
+        <h3>Organik Nedenler:</h3>
+        <li><strong>Yapısal Anormallikler:</strong> Ses tellerindeki nodüller, polipler veya kistler gibi lezyonlar, ses kalitesini etkileyebilir.</li>
+        <li><strong>Enfeksiyonlar veya İltihaplanma:</strong> Larenjit gibi durumlar, ses tellerinin şişmesine ve ses değişikliklerine neden olabilir.</li>
+        <li><strong>Reflü Hastalığı:</strong> Mide asidinin yemek borusuna geri kaçması, ses tellerini tahriş edebilir.</li>
+        
+        <h3>Nörojenik Nedenler:</h3>
+        <li><strong>Sinir Hasarı:</strong> Ses tellerini kontrol eden sinirlerin hasarı, felç veya zayıflık gibi sorunlara yol açabilir.</li>
+        <li><strong>Nörolojik Hastalıklar:</strong> Parkinson hastalığı veya multipl skleroz gibi durumlar, ses kontrolünü etkileyebilir.</li>
+
+        <p>
+           <h2>Ses Bozukluklarında Dil ve Konuşma Terapisi</h2>
+           <p>Ses bozuklukları, bireyin günlük yaşamını, mesleki performansını ve sosyal iletişimini olumsuz etkileyebilir. Dil ve konuşma terapistleri tarafından uygulanan bireyselleştirilmiş terapi programları, ses sağlığını koruma ve iyileştirme sürecinde büyük önem taşır. Kanıta dayalı yaklaşımlar kullanılarak yapılan terapi, bireyin ses kalitesini artırarak sağlıklı ve etkili iletişim kurmasını sağlar. </p>
+            <h4>Ses bozukluklarında dil terapisi şunları hedefler:</h4>
+            <li> Sağlıklı Ses Kullanımı Geliştirmek – Sesin doğru şekilde üretilmesi ve korunması için bireyin ses hijyeni alışkanlıklarını geliştirmek.</li>
+            <li> Sesin Kalitesini ve Dayanıklılığını Artırmak – Ses tellerini güçlendiren egzersizler ve rezonans teknikleri ile bireyin sesinin daha net ve güçlü çıkmasını sağlamak.</li>
+            <li> Solunum ve Ses Koordinasyonunu Düzenlemek – Diyafram nefesi ve doğru ses projeksiyonu teknikleri ile konuşma sırasında solunum ve ses uyumunu sağlamak.</li>
+            <li> Fonksiyonel ve Organik Ses Bozukluklarını Azaltmak – Ses telleri üzerindeki zorlanmaları en aza indirerek, bireyin daha verimli ve rahat konuşmasını desteklemek.</li>
+            <li> Psikolojik ve sosyal desteği sağlamak</li>
+        </p>
+        <h2>Ses Terapisinde Kullanılan Yöntemler</h2>
+        <p>
+            <ul>
+                <li>Ses Hijyeni Eğitimi: Sesin sağlıklı kullanımı için gerekli alışkanlıkların kazandırılmasıdır. Bu eğitim, ses tellerini tahriş edebilecek davranışlardan kaçınmayı ve uygun ses kullanımı tekniklerini öğretmeyi içerir.</li>
+                <li>Fonksiyonel Ses Egzersizleri: Ses tellerinin güçlendirilmesi ve esnekliğinin artırılması amacıyla yapılan egzersizlerdir. Bu egzersizler, sesin kalitesini ve dayanıklılığını artırmaya yardımcı olur.</li>
+                <li>Rezonans Terapisi: Sesin rezonansını optimize ederek, daha verimli ve rahat bir ses üretimini teşvik eder. Bu yöntem, sesin daha az zorlanarak üretilmesini sağlar.</li>
+                <li>Akciğer Hacmi ve Nefes Kontrolü Çalışmaları: Doğru nefes alma teknikleri ve akciğer kapasitesinin artırılması, ses üretiminde önemli rol oynar. Bu çalışmalar, nefes ve ses koordinasyonunu geliştirir.</li>
+                <li>Vokal Fonksiyon Egzersizleri: Ses tellerinin esnekliğini, gücünü ve dayanıklılığını artırmak için tasarlanmış spesifik egzersizlerdir.</li>
+                <li>Yüksek Frekanslı Ses Terapisi: Ses tellerinin titreşim frekansını artırarak, ses kalitesini ve rezonansını iyileştirmeyi amaçlar.</li>
+
+            </ul>
+            
+        </p>
+        <button class="button" onclick="scrollToTop()">Yukarı Çık</button>
+        <a href="index.html" class="button">Ana Sayfaya Dön</a>
+    </div>
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

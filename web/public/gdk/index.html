@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gecikmiş Dil ve Konuşma</title>
+    <base href="/">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="footer.css">
+    <script defer src="footer.js"></script>
+    <link rel="stylesheet" href="navbar.css">
+    <script defer src="navbar.js"></script>
+    <style>
+
+    /*tablo css*/
+   
+
+h2 {
+    color: #2C5282;
+    position: relative;
+    padding-left: 15px;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 5px;
+    background: linear-gradient(to bottom, #2C5282, #90CDF4);
+    border-radius: 3px;
+}
+
+h3 {
+    color: #2C5282;
+    position: relative;
+    padding-left: 15px;
+    font-size: 1.5em;
+    margin: 25px 0 15px;
+}
+
+h3::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background: linear-gradient(to bottom, #2C5282, #90CDF4);
+    border-radius: 3px;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background-color: #2C5282;
+    color: white;
+    font-size: 18px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+      
+
+
+.body-content {
+    margin-top: 80px; /* Menünün altında 80px boşluk bırakır */
+    padding: 20px;
+}
+        body {
+            font-family: 'Nunito', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #333;
+        }
+        .hero {
+            position: relative;
+            height: 100px;
+            background: url('aphasia1.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            font-size: 2.5em;
+            font-weight: bold;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .spacer {
+            height: 50px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in-out;
+            color: #333;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        p {
+            line-height: 1.8;
+            font-size: 1.1em;
+            color: #333;
+        }
+        .image-section {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .image-section img {
+            width: 45%;
+            margin: 0 10px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .image-section img:hover {
+            transform: scale(1.05);
+        }
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            background: #2C5282;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 700;
+            transition: all 0.3s;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .button:hover {
+            background: #90CDF4;
+            color: #2C5282;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"> <img src="images/logo.png" alt=""></div>
+        <ul class="nav-links">
+            <li><a href="/">Anasayfa</a></li>
+            <li><a href="hakkimizda/">Hakkımızda</a></li>
+            <li><a href="hizmetler/">Hizmetler</a></li>
+            <li><a href="iletisim/">İletişim</a></li>            
+        </ul>
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+    </nav>
+    <br>
+
+
+    <div class="hero">Gecikmiş Dil ve Konuşma Hakkında</div>
+    <div class="spacer"></div>
+    <div class="container">
+        <h2>Gecikmiş Dil ve Konuşma Nedir?</h2>
+        <p>
+            Gecikmiş dil ve konuşma, bir çocuğun yaşına uygun dil ve konuşma becerilerini beklenen zamanda edinememesi durumudur. Bu gecikme anlamada (alıcı dil), ifade etmede (ifade edici dil) veya konuşma seslerini üretmede (artikülasyon) görülebilir. Her çocuk kendi hızında gelişse de, belirli yaşlarda beklenen dil ve konuşma becerilerinin görülmemesi dil gecikmesi veya konuşma bozukluğunun işareti olabilir. Erken müdahale, çocuğun dil ve iletişim becerilerini geliştirmek için kritik öneme sahiptir.
+        </p>
+        <div class="image-section">
+            <img src="images/gdk1.jpg" alt="Kekemelik">
+            <img src="images/gdk.jpg" alt="Beyin ve Konuşma">
+        </div>
+        <h2>Gecikmiş Dil ve Konuşmanın Sebepleri</h2>
+        <ul>
+            <li><strong>Genetik Faktörler ve Aile Öyküsü</strong> (Bishop et al., 2017)</li>
+            <li><strong>Prematüre Doğum ve Düşük Doğum Ağırlığı</strong> (Van Noort‐van der Spek et al., 2012)</li>
+            <li><strong>İşitme Kayıpları ve İşitsel İşleme Bozukluğu</strong> (Flexer, 1999)</li>
+            <li><strong>Gelişimsel Dil Bozukluğu (DLD)</strong> (Leonard, 2014)</li>
+            <li><strong>Otizm Spektrum Bozukluğu (OSB) ile İlişkili Dil Gecikmesi</strong> (Tager-Flusberg et al., 2005)</li>
+            <li><strong>Motor Konuşma Bozuklukları (Apraksi, Dizartri)</strong> (Strand, 2020)</li>
+            <li><strong>Nörolojik Bozukluklar (Serebral Palsi, Apraksi, Otizm)</strong> (Holland & Forbes, 2017)</li>
+            <li><strong>Çevresel ve Psikososyal Faktörler (Dil Maruziyetinde Eksiklik, Travma, İhmal)</strong> (Hoff, 2006)</li>
+            <li><strong>Kronik Orta Kulak Enfeksiyonları (Otitis Media) ve Konuşma Gelişimi</strong> (Roberts et al., 2004)</li>
+        </ul>
+        
+        <h3>Hangi Yaşta Ne Beklenir?</h3>
+    <table>
+        <tr>
+            <th>Yaş</th>
+            <th>Beklenen Beceriler</th>
+        </tr>
+        <tr>
+            <td>0-6 ay</td>
+            <td>Seslere tepki verir, agular ve gülümser.</td>
+        </tr>
+        <tr>
+            <td>6-12 ay</td>
+            <td>Babıldama (ba-ba, da-da), ismine tepki verme.</td>
+        </tr>
+        <tr>
+            <td>12-18 ay</td>
+            <td>5-10 kelime söyleme, basit komutları anlama.</td>
+        </tr>
+        <tr>
+            <td>18-24 ay</td>
+            <td>50 kelimeye ulaşma, iki kelimelik ifadeler kullanma.</td>
+        </tr>
+        <tr>
+            <td>2-3 yaş</td>
+            <td>200-500 kelime, 3 kelimelik cümleler, isteklerini anlatabilme.</td>
+        </tr>
+        <tr>
+            <td>3-4 yaş</td>
+            <td>Daha karmaşık cümleler, hikâye anlatma, %75 anlaşılırlık.</td>
+        </tr>
+        <tr>
+            <td>4-5 yaş</td>
+            <td>Çoğu sesin doğru üretimi, detaylı anlatım.</td>
+        </tr>
+    </table>
+<p>Eğer çocuk yukarıdaki gelişim basamaklarını beklenen zamanlarda yerine getiremiyorsa, dil gecikmesi olabileceği düşünülmelidir.</p>
+        <h3>Dil ve Konuşma Gecikmesinde Kırmızı Bayraklar </h3>
+<table>
+    <tr>
+        <th>Belirti</th>
+    </tr>
+    <tr>
+        <td>❌ 12 ayda babıldama ve jestlerin olmaması.</td>
+    </tr>
+    <tr>
+        <td>❌ 18 ayda kelime söylememesi.</td>
+    </tr>
+    <tr>
+        <td>❌ 24 ayda en az 50 kelime kullanmaması, iki kelimelik ifadeler oluşturmaması.</td>
+    </tr>
+    <tr>
+        <td>❌ 3 yaşında cümle kurmaması, konuşmasının büyük ölçüde anlaşılmaması.</td>
+    </tr>
+    <tr>
+        <td>❌ 4 yaşında hala çoğu sesin yanlış üretilmesi ve kelime haznesinin sınırlı olması.</td>
+    </tr>
+    <tr>
+        <td>❌ 5 yaşında dilbilgisi kurallarını uygulamakta zorlanması, karmaşık cümleler kuramaması.</td>
+    </tr>
+</table>
+           <h2>Gecikmiş Dil ve Konuşmada, Dil ve Konuşma Terapisi</h2>
+           <p>Dil ve konuşma terapistleri, gecikmiş dil ve konuşma için kanıta dayalı yöntemler kullanarak çocuğun iletişim becerilerini geliştirmeye yardımcı olur.</p>
+
+          <h4> Dil Gelişimi İçin Kullanılan Yöntemler</h4>
+                ✔️ <strong>Doğru Model Olma:</strong> Terapist ve ebeveynler, çocuğun kelime hazinesini artırmak için doğru sözcükler ve cümleler kullanır. <br>
+                ✔️ <strong>Etkileşim Temelli Yaklaşımlar:</strong> Floortime, Hanen Programı gibi yöntemlerle çocuğun ilgi alanları üzerinden dil gelişimi desteklenir. <br>
+                ✔️ <strong>Oyun Temelli Dil Terapisi:</strong> Çocuğun oyun sırasında iletişim kurmasını teşvik eden teknikler uygulanır. <br>
+                ✔️ <strong>Fonolojik Farkındalık Çalışmaları:</strong> Sesleri tanıma ve ayırt etme çalışmaları ile dil gelişimi desteklenir. <br>
+                ✔️ <strong>Görsel Destekler:</strong> Resimli kartlar, işaret dili veya alternatif iletişim yöntemleri kullanılarak iletişim kolaylaştırılır. <br>
+                ✔️ <strong>Erken Müdahale Programları:</strong> Erken dönemde başlanan terapi, ilerleyen yaşlarda oluşabilecek akademik ve sosyal zorlukları önlemeye yardımcı olur. <br>
+        </p> <strong>
+        📢 Gecikmiş dil ve konuşma, erken müdahale edilmezse akademik, sosyal ve duygusal gelişimi olumsuz etkileyebilir. Ancak, erken teşhis ve uygun dil-konuşma terapisi ile bu çocukların iletişim becerileri büyük ölçüde gelişebilir. Çocuğunuz yaşına uygun dil ve konuşma becerilerini göstermiyorsa, bir dil ve konuşma terapistine başvurmak erken müdahale için kritik önem taşır!
+        <p></strong>
+           
+        </p>
+        <button class="button" onclick="scrollToTop()">Yukarı Çık</button>
+        <a href="index.html" class="button">Ana Sayfaya Dön</a>
+    </div>
+    <div class="spacer"></div>
+    <div class="spacer"></div>
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

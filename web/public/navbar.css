@@ -1,0 +1,172 @@
+/* Navbar stili */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F7F7F7;
+    padding: 10px 100px;
+    height: 80px;
+}
+
+.navbar .logo {
+    padding-left: 40px;
+}
+
+.navbar .logo img {
+    height: 60px;
+    width: auto;
+    vertical-align: middle;
+}
+
+.logo {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.logo img{
+    width: 60px;
+    height: 60px;
+    padding-top: 8px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    padding-right: 70px;
+    margin: 0;
+    height: 100%;
+}
+
+.nav-links li {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0;
+}
+
+.nav-links a {
+    color: #B39DDB;
+    text-decoration: none;
+    font-size: 18px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border-radius: 8px;
+    margin-top: 20px;
+    transform-origin: center;
+}
+
+.nav-links a:hover {
+    color: #673AB7;
+    background-color: rgba(179, 157, 219, 0.1);
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(179, 157, 219, 0.3);
+}
+
+/* Mobil menü için */
+.menu-toggle {
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+/* Responsive tasarım */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: rgb(95, 158, 93);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 28px;
+        color: white;
+        cursor: pointer;
+        padding: 10px;
+    }
+}
+/* Mobil menü için */
+.menu-toggle {
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+/* Responsive tasarım */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column-reverse;
+        background-color: rgb(95, 158, 93);
+        position: relative;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .nav-links.active {
+        display: display;
+    }
+
+    
+}
+/* Mobil menü için stil */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Başlangıçta menü gizli */
+        flex-direction: column;
+        background-color: rgb(95, 158, 93);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .nav-links.active {
+        display: flex; /* Açılınca görünür yap */
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 28px;
+        color: white;
+        cursor: pointer;
+        padding: 10px;
+    }
+}
+.nav-links a::after {
+    display: none;
+}
+
+.nav-links a:hover::after {
+    display: none;
+}
+
+.logo img{
+    width: 60px;
+    height: 60px;
+    padding-top: 8px;
+}

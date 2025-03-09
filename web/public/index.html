@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menü Barı</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="footer.css">
+    <script defer src="footer.js"></script>
+    <link rel="stylesheet" href="navbar.css">
+    <script defer src="navbar.js"></script>
+
+</head>
+<body>
+
+
+    <nav class="navbar">
+        <div class="logo"> <img src="images/logo.png" alt=""></div>
+        <ul class="nav-links">
+            <li><a href="/">Anasayfa</a></li>
+            <li><a href="hakkimizda/">Hakkımızda</a></li>
+            <li><a href="hizmetler/">Hizmetler</a></li>
+            <li><a href="iletisim/">İletişim</a></li>            
+        </ul>
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+    </nav>
+   
+    
+    
+
+    
+
+
+    <!-- Hero Slider -->
+    <header class="hero">
+        <div class="slider-container">
+            <div class="slide active" style="background-image: url('images/2.jpg');">
+                <div class="slide-text">
+                    <h1>Dil Terapisiyle İletişimini Güçlendir!</h1>
+                    <p>Kelimeleriniz sizi tanımlar. Konuşma becerilerinizi geliştirmek için bizimle olun.</p>
+                </div>
+            </div>
+
+            <div class="slide" style="background-image: url('images/4.jpg');">
+                <div class="slide-text">
+                    <h1>Uzman Desteği ile Özgüven Kazanın!</h1>
+                    <p>Konuşmanızı geliştirmek ve daha akıcı konuşmak için profesyonel terapistlerimizle çalışın.</p>
+                </div>
+            </div>
+
+            <div class="slide" style="background-image: url('images/5.jpg');">
+                <div class="slide-text">
+                    <h1>Teleterapi ile Evde Konforlu Destek!</h1>
+                    <p>İnternet üzerinden konuşma terapisi alarak zamandan tasarruf edin ve rahat bir ortamda terapiye katılın.</p>
+                </div>
+            </div>
+
+            <div class="slide" style="background-image: url('images/6.jpg');">
+                <div class="slide-text">
+                    <h1>İletişim Hayatın Anahtarıdır!</h1>
+                    <p>Konuşma ve dil terapisiyle kendinizi daha iyi ifade edin.</p>
+                </div>
+            </div>
+
+            <!-- Ok Butonları -->
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+
+            <!-- Gösterge Noktaları -->
+            <div class="slider-indicators">
+                <span class="indicator active"></span>
+                <span class="indicator"></span>
+                <span class="indicator"></span>
+                <span class="indicator"></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Çalışma Alanları -->
+    <section class="services">
+        <div onclick ="window.location.href='kekemelik/';" class="service">
+            <img src="images/kekemelik.jpg" alt="Kekemelik">
+            <h2>Kekemelik</h2>
+            <p>Kekemelik, konuşma akıcılığının bozulmasıdır. Erken müdahale ile kontrol altına alınabilir.</p>
+        </div>
+    
+        <div onclick ="window.location.href='afazi/';" class="service">
+            <img src="images/afazi.jpg" alt="Afazi">
+            <h2>Afazi</h2>
+            <p>Afazi, beyin hasarı sonrası dil becerilerinde bozulmaya yol açan bir rahatsızlıktır.</p>
+        </div>
+    
+        <div onclick ="window.location.href='konusmasesi/';" class="service">
+            <img src="images/artikülasyon.jpg" alt="Konuşma Sesi Bozukluğu">
+            <h2>Konuşma Sesi Bozukluğu</h2>
+            <p>Seslerin yanlış üretilmesi veya anlaşılır olmaması durumudur. Konuşma terapisi ile düzeltilir.</p>
+        </div>
+    
+        <div onclick ="window.location.href='gdk/';" class="service">
+            <img src="images/gdk.jpg" alt="Gecikmiş Dil ve Konuşma">
+            <h2>Gecikmiş Dil ve Konuşma</h2>
+            <p>Çocukların yaşına uygun dil becerilerini kazanmada gecikme yaşaması durumudur.</p>
+        </div>
+    
+        <div onclick ="window.location.href='otizm/';" class="service">
+            <img src="images/floortime1.jpg" alt="Otizm ve Konuşma Terapisi">
+            <h2>Otizm ve Konuşma Terapisi</h2>
+            <p>Otizmli bireylerin sosyal ve dil becerilerini geliştirmeye yönelik özel terapi programları.</p>
+        </div>
+    
+        <div onclick ="window.location.href='ses/';" class="service">
+            <img src="images/ses.jpg" alt="Ses Bozuklukları">
+            <h2>Ses Bozuklukları</h2>
+            <p>Ses tellerinde meydana gelen problemler nedeniyle sesin kalitesinde, tonunda ve yüksekliğinde değişiklikler.</p>
+        </div>
+    
+        <div onclick ="window.location.href='mkb/';" class="service">
+            <img src="images/brain.jpg" alt="Motor Konuşma Bozuklukları">
+            <h2>Motor Konuşma Bozuklukları</h2>
+            <p>Beyinden gelen konuşma sinyallerinin kaslara iletilmesi sürecindeki bozukluklar.</p>
+        </div>
+
+        <div onclick ="window.location.href='floortime/';" class="service">
+            <img src="images/floortime.jpg" alt="Floortime Terapisi">
+            <h2>DIR Floortime Terapisi</h2>
+            <p>Otizmli bireylerin sosyal ve dil becerilerini geliştirmeye yönelik özel terapi programları.</p>
+        </div>
+    
+        <div onclick ="window.location.href='disleksi/';" class="service">
+            <img src="images/disleksi.jpg" alt="Ses Bozuklukları">
+            <h2>Öğrenme Güçlüğü: Disleksi, disgrafi</h2>
+            <p>Ses tellerinde meydana gelen problemler nedeniyle sesin kalitesinde, tonunda ve yüksekliğinde değişiklikler.</p>
+        </div>
+    
+        <div onclick ="window.location.href='ccka/';" class="service">
+            <img src="images/prob.jpg" alt="foto.jpg">
+            <h2>Çocukluk Çağı Konuşma Apraksisi</h2>
+            <p>Beyinden gelen konuşma sinyallerinin kaslara iletilmesi sürecindeki bozukluklar.</p>
+        </div>
+
+        <div onclick ="window.location.href='down/';" class="service">
+            <img src="images/down.jpg" alt="Motor Konuşma Bozuklukları">
+            <h2>Down Sendromu</h2>
+            <p>Beyinden gelen konuşma sinyallerinin kaslara iletilmesi sürecindeki bozukluklar.</p>
+        </div>
+    </section>
+    
+    
+</body>
+</html>
+
+

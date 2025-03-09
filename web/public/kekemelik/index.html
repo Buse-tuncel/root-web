@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kekemelik Hakkında</title>
+    <base href="/">
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="footer.css">
+    <script defer src="footer.js"></script>
+    <link rel="stylesheet" href="navbar.css">
+    <script defer src="navbar.js"></script>
+    <style>
+     
+        .body-content {
+            margin-top: 80px;
+            padding: 20px;
+        }
+        body {
+            font-family: 'Nunito', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #333;
+        }
+        .hero {
+            position: relative;
+            height: 100px;
+            background: url('brain.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            font-size: 2.5em;
+            font-weight: bold;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .spacer {
+            height: 50px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in-out;
+            color: #333;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        h2 {
+            color: #007BFF;
+            border-left: 5px solid #007BFF;
+            padding-left: 10px;
+            font-size: 1.8em;
+        }
+        p {
+            line-height: 1.8;
+            font-size: 1.1em;
+            color: #333;
+        }
+        .image-section {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .image-section img {
+            width: 45%;
+            margin: 0 10px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .image-section img:hover {
+            transform: scale(1.05);
+        }
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            background: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+        .button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"> <img src="images/logo.png" alt=""></div>
+        <ul class="nav-links">
+            <li><a href="/">Anasayfa</a></li>
+            <li><a href="hakkimizda/">Hakkımızda</a></li>
+            <li><a href="hizmetler/">Hizmetler</a></li>
+            <li><a href="iletisim/">İletişim</a></li>            
+        </ul>
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+    </nav>
+    <br>
+    <div class="hero">Kekemelik Hakkında</div>
+    <div class="spacer"></div>
+    <div class="container">
+        <h2>Kekemelik Nedir?</h2>
+        <p>
+            Kekemelik, konuşmanın akıcılığında ve ritminde bozulmalarla karakterize edilen bir iletişim bozukluğudur. Bu durum, seslerin, hecelerin veya kelimelerin tekrarı, uzatılması veya konuşma sırasında duraksamalar (bloklar) şeklinde ortaya çıkar. Kekemelik, konuşmanın doğal akışını kesintiye uğratarak bireyin iletişim becerilerini ve sosyal etkileşimlerini olumsuz etkileyebilir.
+        </p>
+        <div class="image-section">
+            <img src="images/ice.jpg" alt="Kekemelik">
+            <img src="brain.jpg" alt="Beyin ve Konuşma">
+        </div>
+        <h2>Nedenleri</h2>
+        <p> 
+            Kekemeliğin kesin nedeni tam olarak bilinmemekle birlikte, çeşitli faktörlerin bir araya gelmesiyle ortaya çıktığı düşünülmektedir:
+   <li> Genetik Faktörler: Ailede kekemelik öyküsü olan bireylerde kekemelik görülme olasılığı daha yüksektir, bu da genetik yatkınlığın rol oynayabileceğini göstermektedir.</li>
+   <li>Nörofizyolojik Faktörler: Beynin konuşma ve dil üretiminden sorumlu bölgelerindeki işlevsel ve yapısal farklılıklar kekemeliğe katkıda bulunabilir.</li>
+   <li>Gelişimsel Faktörler: Çocukların dil ve konuşma becerilerinin hızla geliştiği dönemlerde, konuşma akıcılığında geçici bozulmalar görülebilir. Bu durum, bazı çocuklarda kalıcı kekemeliğe dönüşebilir.</li>
+   <li>Psikososyal Faktörler: Stres, kaygı, düşük özgüven ve sosyal baskı gibi faktörler kekemeliğin şiddetini artırabilir, ancak tek başına kekemeliğe neden olmazlar.</li>
+
+        </p>
+        <h2>Kekemelik Terapisi</h2>
+        <p>
+            Kekemelik terapisi, bireyin yaşına, kekemeliğin şiddetine ve bireysel ihtiyaçlarına göre uyarlanır. Terapi yaklaşımları şunları içerebilir:
+<li>Konuşma Akıcılığını Şekillendirme: Bu teknik, bireyin konuşma hızını yavaşlatarak ve nefes kontrolünü geliştirerek daha akıcı konuşmasını sağlamayı hedefler. Örneğin, "uzatmalı konuşma" tekniği ile seslerin ve hecelerin daha uzun süreli üretilmesi teşvik edilir.</li>
+<li>Bilişsel-Davranışçı Terapi (BDT): BDT, bireyin kekemelikle ilgili olumsuz düşünce ve duygularını tanımlamasına ve bunları değiştirmesine yardımcı olur. Bu yaklaşım, kekemelikle ilişkili kaygıyı azaltmayı ve iletişim güvenini artırmayı amaçlar.</li>
+<li>Duyarsızlaştırma Teknikleri: Bireyin kekemelikle ilgili korku ve kaygılarını azaltmak için kontrollü ortamlarda kekemelik davranışlarını sergilemesi teşvik edilir. Bu, bireyin kekemelik anlarında yaşadığı stresi azaltabilir.</li>
+<li>Elektronik Cihazlar: Bazı elektronik cihazlar, bireyin kendi konuşmasını gecikmeli olarak duymasını sağlayarak konuşma akıcılığını artırabilir. Ancak, bu tür cihazların etkinliği bireyden bireye değişir.</li>
+<li>Farmakolojik Tedavi: Kekemelik tedavisinde ilaç kullanımı üzerine araştırmalar devam etmektedir, ancak şu anda spesifik bir ilaç tedavisi bulunmamaktadır.
+
+        </p>
+       
+        <h2>Terapi Yöntemleri</h2>
+        <p>
+            <li>Fluency Shaping (Akıcılık Şekillendirme)</li>
+            <li>Stuttering Modification (Kekemeliği Değiştirme)</li>
+            <li>Fun with Fluency</li>
+            <li>Lidcombe Programı</li>
+            <li>Cognitive Behavioral Therapy (CBT – Bilişsel Davranışçı Terapi)</li>
+            <li>Demands and Capacities Model (DCM – Talep ve Kapasite Modeli)</li>
+            <li>Indirect Therapy (Dolaylı Terapi)</li>
+
+
+
+        </p>
+        <button class="button" onclick="scrollToTop()">Yukarı Çık</button>
+        <a href="index.html" class="button">Ana Sayfaya Dön</a>
+    </div>
+    <div class="spacer"></div>
+    <div class="spacer"></div>
+    <div id="footer-container"></div>
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

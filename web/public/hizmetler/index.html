@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hizmetlerimiz - Dil ve Konuşma Terapisi</title>
+    <base href="/">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <script defer src="footer.js"></script>
+    <style>
+        .services-box {
+            padding: 70px 20px;
+            background-color: #f8f9fa;
+        }
+
+        .services-box h2 {
+            text-align: center;
+            color: #2C5282;
+            font-size: 2.2em;
+            margin-bottom: 50px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .services-box h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 2px;
+            background: #2C5282;
+            opacity: 0.5;
+        }
+
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .service-box {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(44, 82, 130, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+            height: 300px;
+            border: 1px solid rgba(44, 82, 130, 0.1);
+        }
+
+        .service-box img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .service-box .service-content {
+            padding: 20px;
+            background: white;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            border-radius: 0 0 15px 15px;
+            border-top: 1px solid rgba(44, 82, 130, 0.1);
+        }
+
+        .service-box h3 {
+            color: #333;
+            font-size: 1.2em;
+            margin: 0;
+            transition: all 0.3s ease;
+        }
+
+        .service-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(44, 82, 130, 0.2);
+            background: rgba(44, 82, 130, 0.02);
+        }
+
+        .service-box:hover .service-content {
+            background: rgba(44, 82, 130, 0.05);
+        }
+
+        .service-box:hover h3 {
+            color: #2C5282;
+        }
+
+        .service-box:hover img {
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            .services-container {
+                grid-template-columns: 1fr;
+                padding: 0 10px;
+            }
+            
+            .service-box {
+                height: 250px;
+            }
+            
+            .service-box img {
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar-container"></div>
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+                const script = document.createElement('script');
+                script.src = 'navbar.js';
+                document.body.appendChild(script);
+            });
+    </script>
+
+    <div class="services-box">
+        <h2>Uzmanlık Alanlarımız</h2>
+        <div class="services-container">
+            <div class="service-box" onclick="window.location.href='kekemelik/';">
+                <img src="images/kekemelik.jpg" alt="Kekemelik Terapisi">
+                <div class="service-content">
+                    <h3>Kekemelik Terapisi</h3>
+                </div>
+            </div>
+            <div class="service-box" onclick="window.location.href='afazi/';">
+                <img src="images/afazi.jpg" alt="Afazi Rehabilitasyonu">
+                <div class="service-content">
+                    <h3>Afazi Rehabilitasyonu</h3>
+                </div>
+            </div>
+            <div class="service-box" onclick="window.location.href='konusmasesi/';">
+                <img src="images/artikülasyon.jpg" alt="Konuşma Sesi Bozuklukları">
+                <div class="service-content">
+                    <h3>Konuşma Sesi Bozuklukları</h3>
+                </div>
+            </div>
+            <div class="service-box" onclick="window.location.href='gdk/';">
+                <img src="images/gdk.jpg" alt="Gecikmiş Dil ve Konuşma">
+                <div class="service-content">
+                    <h3>Gecikmiş Dil ve Konuşma</h3>
+                </div>
+            </div>
+            <div class="service-box" onclick="window.location.href='otizm/';">
+                <img src="images/ot.jpeg" alt="Otizm Spektrum Bozuklukları">
+                <div class="service-content">
+                    <h3>Otizm Spektrum Bozuklukları</h3>
+                </div>
+            </div>
+            <div class="service-box" onclick="window.location.href='ses/';">
+                <img src="images/ses.jpg" alt="Ses Bozuklukları">
+                <div class="service-content">
+                    <h3>Ses Bozuklukları</h3>
+                </div>
+            </div>
+            <div class="service-box" onclick="window.location.href='mkb/';">
+                <img src="images/brain.jpg" alt="Motor Konuşma Bozuklukları">
+                <div class="service-content">
+                    <h3>Motor Konuşma Bozuklukları</h3>
+                </div>
+            </div>
+            <div class="service-box" onclick="window.location.href='floortime/';">
+                <img src="images/floortime.jpg" alt="DIR Floortime Terapisi">
+                <div class="service-content">
+                    <h3>DIR Floortime Terapisi</h3>
+                </div>
+            </div>
+            <div class="service-box" onclick="window.location.href='disleksi/';">
+                <img src="images/disleksi.jpg" alt="Öğrenme Güçlüğü: Disleksi">
+                <div class="service-content">
+                    <h3>Öğrenme Güçlüğü: Disleksi</h3>
+                </div>
+            </div>
+            <div class="service-box" onclick="window.location.href='ccka/';">
+                <img src="images/apraksi.jpg" alt="Çocukluk Çağı Konuşma Apraksisi">
+                <div class="service-content">
+                    <h3>Çocukluk Çağı Konuşma Apraksisi</h3>
+                </div>
+            </div>
+            <div class="service-box" onclick="window.location.href='down/';">
+                <img src="images/down.jpg" alt="Down Sendromu">
+                <div class="service-content">
+                    <h3>Down Sendromu</h3>
+                </div>
+            </div>
+            <div class="service-box" onclick="window.location.href='teleterapi/';">
+                <img src="images/tele.jpg" alt="Teleterapi">
+                <div class="service-content">
+                    <h3>Teleterapi</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+</body>
+</html>

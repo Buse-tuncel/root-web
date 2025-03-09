@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hakkımızda - Dil ve Konuşma Terapisi</title>
+    <base href="/">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <script defer src="navbar.js"></script>
+    <script defer src="footer.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.slide');
+            const indicators = document.querySelectorAll('.indicator');
+            const prevButton = document.querySelector('.prev');
+            const nextButton = document.querySelector('.next');
+            let currentSlide = 0;
+            const slideCount = slides.length;
+            let slideInterval;
+
+            function showSlide(index) {
+                slides.forEach(slide => slide.classList.remove('active'));
+                indicators.forEach(indicator => indicator.classList.remove('active'));
+                
+                slides[index].classList.add('active');
+                indicators[index].classList.add('active');
+                currentSlide = index;
+            }
+
+            function nextSlide() {
+                let nextIndex = (currentSlide + 1) % slideCount;
+                showSlide(nextIndex);
+            }
+
+            function prevSlide() {
+                let prevIndex = (currentSlide - 1 + slideCount) % slideCount;
+                showSlide(prevIndex);
+            }
+
+            function startSlideShow() {
+                stopSlideShow();
+                slideInterval = setInterval(nextSlide, 5000);
+            }
+
+            function stopSlideShow() {
+                if (slideInterval) {
+                    clearInterval(slideInterval);
+                }
+            }
+
+            // Ok tuşları için event listener'ları
+            prevButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                prevSlide();
+                stopSlideShow();
+                startSlideShow();
+            });
+
+            nextButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                nextSlide();
+                stopSlideShow();
+                startSlideShow();
+            });
+
+            // İndikatörler için event listener'lar
+            indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', function() {
+                    showSlide(index);
+                    stopSlideShow();
+                    startSlideShow();
+                });
+            });
+
+            // Hover durumunda otomatik geçişi durdur
+            const sliderContainer = document.querySelector('.slider-container');
+            sliderContainer.addEventListener('mouseenter', stopSlideShow);
+            sliderContainer.addEventListener('mouseleave', startSlideShow);
+
+            // Başlangıçta slider'ı başlat
+            startSlideShow();
+        });
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"> <img src="images/logo.png" alt=""></div>
+        <ul class="nav-links">
+            <li><a href="/">Anasayfa</a></li>
+            <li><a href="hakkimizda/">Hakkımızda</a></li>
+            <li><a href="hizmetler/">Hizmetler</a></li>
+            <li><a href="iletisim/">İletişim</a></li>            
+        </ul>
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+    </nav>
+
+    <header class="hero">
+        <div class="slider-container">
+            <div class="slide active" style="background-image: url('images/dis.jpeg');">
+                <div class="slide-text">
+                    <h1>Hakkımızda</h1>
+                    <p>Modern ve Konforlu Kliniğimiz</p>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('images/oyun.jpeg');">
+                <div class="slide-text">
+                    <h1>Uzman Kadromuz</h1>
+                    <p>Deneyimli Terapistlerimizle Yanınızdayız</p>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('images/bekleme.jpeg');">
+                <div class="slide-text">
+                    <h1>Ferah Ortam</h1>
+                    <p>Rahat ve Huzurlu Bir Terapi Deneyimi</p>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('images/hayat.jpeg');">
+                <div class="slide-text">
+                    <h1>Kaliteli Hizmet</h1>
+                    <p>Güvenilir ve Profesyonel Yaklaşım</p>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('images/resep.jpeg');">
+                <div class="slide-text">
+                    <h1>Resepsiyon</h1>
+                    <p>Güler Yüzlü Karşılama ve Profesyonel Hizmet</p>
+                </div>
+            </div>
+
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+
+            <div class="slider-indicators">
+                <span class="indicator active"></span>
+                <span class="indicator"></span>
+                <span class="indicator"></span>
+                <span class="indicator"></span>
+                <span class="indicator"></span>
+            </div>
+        </div>
+    </header>
+
+    <section class="about-content">
+        <div class="mission-vision-container">
+            <div class="info-card mission">
+                <div class="icon">
+                    <i class="fas fa-bullseye"></i>
+                </div>
+                <h3>Misyonumuz</h3>
+                <p>Bilimsel ve kanıta dayalı yaklaşımlarla, her bireyin iletişim potansiyelini en üst düzeye çıkarmak için çalışıyoruz. Kişiye özel terapi programları ile yaşam kalitesini artırmayı hedefliyoruz.</p>
+            </div>
+            
+            <div class="info-card vision">
+                <div class="icon">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <h3>Vizyonumuz</h3>
+                <p>Dil ve konuşma terapisi alanında yenilikçi yaklaşımları takip eden, sürekli gelişen ve topluma değer katan bir merkez olmak. Bilimsel araştırmalara katkı sağlayarak alanımızda öncü olmayı hedefliyoruz.</p>
+            </div>
+
+            <div class="info-card values">
+                <div class="icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h3>Değerlerimiz</h3>
+                <p>Etik ilkeler, profesyonellik, güven ve şeffaflık temel değerlerimizdir. Her danışanımızın özel olduğuna inanıyor ve buna uygun hizmet sunuyoruz.</p>
+            </div>
+        </div>
+
+        <div class="stats-container">
+            <div class="stat-item">
+                <div class="stat-number">500+</div>
+                <div class="stat-label">Mutlu Danışan</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">5+</div>
+                <div class="stat-label">Yıllık Deneyim</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">12+</div>
+                <div class="stat-label">Uzmanlık Alanı</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Danışan Memnuniyeti</div>
+            </div>
+        </div>
+
+        <div class="approach-section">
+            <h2>Terapötik Yaklaşımımız</h2>
+            <div class="approach-grid">
+                <div class="approach-item">
+                    <i class="fas fa-user-md"></i>
+                    <h4>Bireysel Değerlendirme</h4>
+                    <p>Her danışanımız için kapsamlı ve detaylı değerlendirme yapıyoruz.</p>
+                </div>
+                <div class="approach-item">
+                    <i class="fas fa-chart-line"></i>
+                    <h4>Bilimsel Yöntemler</h4>
+                    <p>Kanıta dayalı terapi teknikleri kullanıyoruz.</p>
+                </div>
+                <div class="approach-item">
+                    <i class="fas fa-hands-helping"></i>
+                    <h4>Aile Katılımı</h4>
+                    <p>Terapi sürecine aileyi dahil ederek başarıyı artırıyoruz.</p>
+                </div>
+                <div class="approach-item">
+                    <i class="fas fa-clock"></i>
+                    <h4>Düzenli Takip</h4>
+                    <p>Gelişimi düzenli olarak değerlendirip raporluyoruz.</p>
+                </div>
+            </div>
+        </div>
+
+    <div class="profile-section">
+        <div class="profile-content">
+            <div class="profile-image">
+                <img src="images/pp.jpg" alt="Dkt. Buse Tunçel" class="profile-img">
+            </div>
+            <div class="profile-info">
+                <h2>Dkt. Buse Tunçel</h2>
+                <h3>Dil ve Konuşma Terapisti</h3>
+                <p class="profile-bio">
+                    Merhaba, ben dil ve konuşma terapisti Buse Tunçel, 2022 yılında Üsküdar Üniversitesi Dil ve Konuşma Terapisi Bölümü lisans programından mezun oldum Nörobilim alanında yüksek lisansımı tamamladım. Aynı zamanda Dil ve Konuşma Terapisi Bölümü'nde yüksek lisans yapmaktayım. Çocuk ve yetişkinlerde görülen dil ve konuşma bozukluklarının değerlendirme ve terapisinde aktif olarak çalışıyorum. Benim hakkımda daha fazla bilgi edinmek profili görüntüle butonuna tıklayabilirsin.
+                </p>
+                <div class="profile-buttons">
+                    
+                    <a href="https://www.doktorsitesi.com/buse-tuncel/dil-konusma-bozuklari-b/istanbul" class="profile-btn" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> Profili Görüntüle
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motor Konuşma Bozuklukları</title>
+    <base href="/">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="footer.css">
+    <script defer src="footer.js"></script>
+    <link rel="stylesheet" href="navbar.css">
+    <script defer src="navbar.js"></script>
+    <style>
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+       
+
+/* Mobil Menü İçin Hamburger Butonu */
+.menu-toggle {
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+.body-content {
+    margin-top: 80px; /* Menünün altında 80px boşluk bırakır */
+    padding: 20px;
+}
+        body {
+            font-family: 'Nunito', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #333;
+        }
+        .hero {
+            position: relative;
+            height: 100px;
+            background: url('aphasia1.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            font-size: 2.5em;
+            font-weight: bold;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .spacer {
+            height: 50px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in-out;
+            color: #333;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        h2 {
+            color: #2C5282;
+            position: relative;
+            padding-left: 15px;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+        h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 5px;
+            background: linear-gradient(to bottom, #2C5282, #90CDF4);
+            border-radius: 3px;
+        }
+        h3 {
+            color: #2C5282;
+            position: relative;
+            padding-left: 15px;
+            font-size: 1.5em;
+            margin: 25px 0 15px;
+        }
+        h3::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background: linear-gradient(to bottom, #2C5282, #90CDF4);
+            border-radius: 3px;
+        }
+        p {
+            line-height: 1.8;
+            font-size: 1.1em;
+            color: #333;
+        }
+        .image-section {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .image-section img {
+            width: 45%;
+            margin: 0 10px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .image-section img:hover {
+            transform: scale(1.05);
+        }
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            background: #2C5282;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 700;
+            transition: all 0.3s;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-right: 10px;
+        }
+        .button:hover {
+            background: #90CDF4;
+            color: #2C5282;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"> <img src="images/logo.png" alt=""></div>
+        <ul class="nav-links">
+            <li><a href="/">Anasayfa</a></li>
+            <li><a href="hakkimizda/">Hakkımızda</a></li>
+            <li><a href="hizmetler/">Hizmetler</a></li>
+            <li><a href="iletisim/">İletişim</a></li>            
+        </ul>
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+    </nav>
+    <br>
+
+
+    <div class="hero">Motor Konuşma Bozuklukları Hakkında</div>
+    <div class="spacer"></div>
+    <div class="container">
+        <h2>Motor Konuşma Bozuklukları Nedir?</h2>
+        <p>
+            Afazi, beynin dil ve konuşma işlevlerini yöneten bölgelerinde meydana gelen hasar sonucu oluşan edinilmiş bir dil bozukluğudur. Bu durum, bireyin konuşma, anlama, okuma ve yazma gibi dilsel becerilerini etkileyebilir. Afazi genellikle inme (felç), kafa travması, beyin tümörleri, nörodejeneratif hastalıklar veya beyin enfeksiyonları sonucu ortaya çıkar.
+        </p>
+        <div class="image-section">
+            <img src="images/noron.jpg" alt="Kekemelik">
+            <img src="images/mkb.jpg" alt="Beyin ve Konuşma">
+        </div>
+        <h2>Konuşma Apraksisi</h2>
+        <p>Konuşma apraksisi, bireyin konuşma hareketlerini planlama ve programlamada güçlük yaşadığı bir motor konuşma bozukluğudur. Beyin, ağız ve konuşma kaslarına doğru komutları veremez, ancak kaslarda bir zayıflık ya da felç söz konusu değildir. Apraksi, genellikle beyin hasarı (örneğin inme, travmatik beyin hasarı) sonrası ortaya çıkar.</p>
+        <h3>Belirtiler:</h3>
+        <li> <strong>Ses ve hece değişiklikleri:</strong> Aynı kelime farklı denemelerde farklı söylenebilir.</li>
+        <li> <strong>Kelimeleri söylemeye başlarken zorlanma:</strong> Özellikle uzun veya karmaşık kelimelerde ilk sesi çıkarmakta güçlük.</li>
+        <li> <strong>Konuşma sırasında duraksamalar:</strong> Sesler ve kelimeler arasında geçiş yapmakta zorlanma.</li>
+        <li> <strong>Yanlış vurgu ve ritim:</strong> Doğal konuşma akışında bozukluk.</li>
+        <li> <strong>Kelimeleri söylemeye başlarken zorlanma:</strong> Özellikle uzun veya karmaşık kelimelerde ilk sesi çıkarmakta güçlük.</li>
+
+        <h3>Terapi Yöntemleri:</h3>
+        <li> <strong>Motor Öğrenme Prensipleri (MLP):</strong> Tekrar ve geri bildirimle konuşma hareketlerini öğrenme.</li>
+        <li> <strong>PROMPT Yöntemi:</strong> Terapistin fiziksel dokunuşlarla çocuğun konuşma hareketlerini yönlendirdiği bir teknik.</li>
+        <li> <strong>Dinamik Temporal ve Taktil İpuçları (DTTC):</strong> Konuşma hareketlerinin aşamalı olarak şekillendirilmesi.</li>
+        <li> <strong>Hedef Kelime Tekniği:</strong> En sık kullanılan ve işlevsel kelimelere odaklanarak konuşma pratiği yapma.</li>
+        <li> <strong>Görsel ve İşitsel Geri Bildirim:</strong> Ayna kullanımı ve ses kaydı ile hastanın kendini değerlendirmesi.</li>
+
+        
+        <h2>Dizartri</h2>
+<p>
+    Dizartri, konuşma kaslarının zayıflığı, hareket kabiliyetinin azalması veya koordinasyon bozukluğu nedeniyle konuşmanın anlaşılırlığını etkileyen bir motor konuşma bozukluğudur. İnme, serebral palsi, Parkinson hastalığı, amyotrofik lateral skleroz (ALS) gibi nörolojik hastalıklar sonucu gelişebilir.
+</p>
+<h3>Belirtiler:</h3>
+        <li> <strong>Bulanık veya nazal konuşma:</strong> Seslerin belirgin olmaması.</li>
+        <li> <strong>Zayıf ses kontrolü:</strong> Monoton konuşma veya ses yüksekliğini ayarlayamama.</li>
+        <li> <strong>Yavaş veya hızlı konuşma:</strong> Konuşma hızında anormallikler.</li>
+        <li> <strong>Solunum güçlüğü: </strong>Konuşurken nefesin yetmemesi.</li>
+        <li> <strong>Zayıf artikülasyon:</strong> Harfleri ve kelimeleri net bir şekilde üretememe.</li>
+
+<h3>Terapi Yöntemleri:</h3>
+
+<li> <strong>Kas Güçlendirme Egzersizleri:</strong> Dudak, dil ve çene kaslarını çalıştıran egzersizler.</li>
+<li> <strong>Solunum Terapisi:</strong> Diyafram kontrolünü artırarak daha güçlü ve sürdürülebilir konuşma sağlama.</li>
+<li> <strong> Yavaş Konuşma Tekniği:</strong> Konuşma hızını düşürerek kelime ve sesleri daha belirgin hale getirme.</li>
+<li> <strong>Ses Terapisi:</strong> Sesin şiddetini ve kalitesini artırmak için yapılan çalışmalar (özellikle Parkinson hastalarında LSVT Loud terapisi gibi).</li>
+<li> <strong>Alternatif ve Destekleyici İletişim (AAC):</strong> Konuşmayı desteklemek için semboller, tabletler veya yazılı iletişim araçları kullanma.</li>
+
+<h2>Apraksi ve Dizartri</h2>
+    
+<table>
+    <thead>
+        <tr>
+            <th>Özellik</th>
+            <th>Apraksi</th>
+            <th>Dizartri</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>Neden</strong></td>
+            <td>Motor planlama ve programlama bozukluğu</td>
+            <td>Kas zayıflığı veya koordinasyon eksikliği</td>
+        </tr>
+        <tr>
+            <td><strong>Kas Gücü</strong></td>
+            <td>Normal</td>
+            <td>Azalmış veya zayıf</td>
+        </tr>
+        <tr>
+            <td><strong>Konuşma Anormallikleri</strong></td>
+            <td>Sesleri yanlış üretme, kelimeleri farklı şekillerde söyleme</td>
+            <td>Bulanık, nazal, yavaş veya monoton konuşma</td>
+        </tr>
+        <tr>
+            <td><strong>Ana Problem</strong></td>
+            <td>Konuşma hareketlerini planlayamama</td>
+            <td>Konuşma kaslarının yeterince güçlü olmaması</td>
+        </tr>
+        <tr>
+            <td><strong>Tedavi Yaklaşımı</strong></td>
+            <td>Motor planlama terapisi (MLP, DTTC, PROMPT)</td>
+            <td>Kas güçlendirme, solunum terapisi, ses terapisi</td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<p>Apraksi ve dizartri, konuşmanın motor kontrolünü etkileyen iki farklı bozukluktur. Erken tanı ve bireyselleştirilmiş terapi, hastaların konuşma becerilerini geliştirmelerinde kritik bir rol oynar. Motor konuşma terapileri, hastanın ihtiyacına göre özelleştirilerek uygulanmalıdır. <br>
+    <strong> 💡 Konuşma güçlüğü yaşayan bireyler için bir dil ve konuşma terapistine başvurmak, sürecin en önemli adımıdır!</strong>
+    </p>
+        <button class="button" onclick="scrollToTop()">Yukarı Çık</button>
+        <a href="index.html" class="button">Ana Sayfaya Dön</a>
+    </div>
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
