@@ -49,6 +49,93 @@
     }
     </script>
     
+    <!-- Yapısal Veri - Terapi Hizmetleri -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Kekemelik Terapisi",
+          "url": "https://www.uskudardilkonusma.com/kekemelik/",
+          "description": "Kekemelik, konuşma akıcılığının bozulmasıdır. Erken müdahale ile kontrol altına alınabilir."
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Afazi Terapisi",
+          "url": "https://www.uskudardilkonusma.com/afazi/",
+          "description": "Afazi, beyin hasarı sonrası dil becerilerinde bozulmaya yol açan bir rahatsızlıktır."
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Konuşma Sesi Bozukluğu Terapisi",
+          "url": "https://www.uskudardilkonusma.com/konusmasesi/",
+          "description": "Seslerin yanlış üretilmesi veya anlaşılır olmaması durumudur. Konuşma terapisi ile düzeltilir."
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Gecikmiş Dil ve Konuşma Terapisi",
+          "url": "https://www.uskudardilkonusma.com/gdk/",
+          "description": "Çocukların yaşına uygun dil becerilerini kazanmada gecikme yaşaması durumudur."
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Otizm ve Konuşma Terapisi",
+          "url": "https://www.uskudardilkonusma.com/otizm/",
+          "description": "Otizmli bireylerin sosyal ve dil becerilerini geliştirmeye yönelik özel terapi programları."
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Ses Bozuklukları Terapisi",
+          "url": "https://www.uskudardilkonusma.com/ses/",
+          "description": "Ses tellerinde meydana gelen problemler nedeniyle sesin kalitesinde, tonunda ve yüksekliğinde değişiklikler."
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Motor Konuşma Bozuklukları Terapisi",
+          "url": "https://www.uskudardilkonusma.com/mkb/",
+          "description": "Beyinden gelen konuşma sinyallerinin kaslara iletilmesi sürecindeki bozukluklar."
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "DIR Floortime Terapisi",
+          "url": "https://www.uskudardilkonusma.com/floortime/",
+          "description": "Otizmli bireylerin sosyal ve dil becerilerini geliştirmeye yönelik özel terapi programları."
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Öğrenme Güçlüğü Terapisi",
+          "url": "https://www.uskudardilkonusma.com/disleksi/",
+          "description": "Öğrenme güçlüğü, bireyin bilişsel kapasitesinden bağımsız olarak, okuma, yazma, matematik veya dil gibi akademik becerilerde belirgin ve kalıcı zorluklarla karakterize edilen nörogelişimsel bir bozukluktur."
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Çocukluk Çağı Konuşma Apraksisi Terapisi",
+          "url": "https://www.uskudardilkonusma.com/ccka/",
+          "description": "Çocukluk çağı konuşma apraksisi, çocuğun konuşma kaslarını doğru sırayla ve koordineli bir şekilde hareket ettirmesini zorlaştıran nörolojik bir konuşma bozukluğudur."
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "Down Sendromu Terapisi",
+          "url": "https://www.uskudardilkonusma.com/down/",
+          "description": "Down sendromu, genetik bir farklılık olup bireylerde fazladan bir 21. kromozomun bulunmasıyla ortaya çıkar."
+        }
+      ]
+    }
+    </script>
+    
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9XQBVB710B"></script>
     <script>
@@ -136,73 +223,106 @@
         </section>
 
         <!-- Çalışma Alanları -->
-        <section class="services" aria-labelledby="services-heading">
-            <h2 id="services-heading" class="visually-hidden">Terapi Hizmetlerimiz</h2>
+        <section id="terapi-hizmetleri" class="services" aria-labelledby="services-heading">
+            <h2 id="services-heading">Dil ve Konuşma Terapisi Hizmetlerimiz</h2>
             
-            <article onclick="window.location.href='kekemelik/';" class="service">
-                <img src="images/kekemelik.jpg" alt="Kekemelik tedavisi gösteren bir görsel">
-                <h3>Kekemelik</h3>
-                <p>Kekemelik, konuşma akıcılığının bozulmasıdır. Erken müdahale ile kontrol altına alınabilir.</p>
+            <article onclick="window.location.href='kekemelik/';" class="service" itemscope itemtype="https://schema.org/MedicalTherapy">
+                <meta itemprop="medicineSystem" content="Konuşma Terapisi" />
+                <meta itemprop="relevantSpecialty" content="Dil ve Konuşma Terapisi" />
+                <img src="images/kekemelik.jpg" alt="Kekemelik tedavisi gösteren bir görsel" itemprop="image">
+                <h3 itemprop="name">Kekemelik</h3>
+                <p itemprop="description">Kekemelik, konuşma akıcılığının bozulmasıdır. Erken müdahale ile kontrol altına alınabilir.</p>
+                <link itemprop="url" href="https://www.uskudardilkonusma.com/kekemelik/" />
             </article>
         
-            <article onclick="window.location.href='afazi/';" class="service">
-                <img src="images/afazi.jpg" alt="Afazi tedavisi gösteren bir görsel">
-                <h3>Afazi</h3>
-                <p>Afazi, beyin hasarı sonrası dil becerilerinde bozulmaya yol açan bir rahatsızlıktır.</p>
+            <article onclick="window.location.href='afazi/';" class="service" itemscope itemtype="https://schema.org/MedicalTherapy">
+                <meta itemprop="medicineSystem" content="Konuşma Terapisi" />
+                <meta itemprop="relevantSpecialty" content="Dil ve Konuşma Terapisi" />
+                <img src="images/afazi.jpg" alt="Afazi tedavisi gösteren bir görsel" itemprop="image">
+                <h3 itemprop="name">Afazi</h3>
+                <p itemprop="description">Afazi, beyin hasarı sonrası dil becerilerinde bozulmaya yol açan bir rahatsızlıktır.</p>
+                <link itemprop="url" href="https://www.uskudardilkonusma.com/afazi/" />
             </article>
         
-            <article onclick="window.location.href='konusmasesi/';" class="service">
-                <img src="images/artikülasyon.jpg" alt="Konuşma Sesi Bozukluğu tedavisi gösteren bir görsel">
-                <h3>Konuşma Sesi Bozukluğu</h3>
-                <p>Seslerin yanlış üretilmesi veya anlaşılır olmaması durumudur. Konuşma terapisi ile düzeltilir.</p>
+            <article onclick="window.location.href='konusmasesi/';" class="service" itemscope itemtype="https://schema.org/MedicalTherapy">
+                <meta itemprop="medicineSystem" content="Konuşma Terapisi" />
+                <meta itemprop="relevantSpecialty" content="Dil ve Konuşma Terapisi" />
+                <img src="images/artikülasyon.jpg" alt="Konuşma Sesi Bozukluğu tedavisi gösteren bir görsel" itemprop="image">
+                <h3 itemprop="name">Konuşma Sesi Bozukluğu</h3>
+                <p itemprop="description">Seslerin yanlış üretilmesi veya anlaşılır olmaması durumudur. Konuşma terapisi ile düzeltilir.</p>
+                <link itemprop="url" href="https://www.uskudardilkonusma.com/konusmasesi/" />
             </article>
         
-            <article onclick="window.location.href='gdk/';" class="service">
-                <img src="images/gdk.jpg" alt="Gecikmiş Dil ve Konuşma tedavisi gösteren bir görsel">
-                <h3>Gecikmiş Dil ve Konuşma</h3>
-                <p>Çocukların yaşına uygun dil becerilerini kazanmada gecikme yaşaması durumudur.</p>
+            <article onclick="window.location.href='gdk/';" class="service" itemscope itemtype="https://schema.org/MedicalTherapy">
+                <meta itemprop="medicineSystem" content="Konuşma Terapisi" />
+                <meta itemprop="relevantSpecialty" content="Dil ve Konuşma Terapisi" />
+                <img src="images/gdk.jpg" alt="Gecikmiş Dil ve Konuşma tedavisi gösteren bir görsel" itemprop="image">
+                <h3 itemprop="name">Gecikmiş Dil ve Konuşma</h3>
+                <p itemprop="description">Çocukların yaşına uygun dil becerilerini kazanmada gecikme yaşaması durumudur.</p>
+                <link itemprop="url" href="https://www.uskudardilkonusma.com/gdk/" />
             </article>
         
-            <article onclick="window.location.href='otizm/';" class="service">
-                <img src="images/floortime1.jpg" alt="Otizm tedavisi gösteren bir görsel">
-                <h3>Otizm ve Konuşma Terapisi</h3>
-                <p>Otizmli bireylerin sosyal ve dil becerilerini geliştirmeye yönelik özel terapi programları.</p>
+            <article onclick="window.location.href='otizm/';" class="service" itemscope itemtype="https://schema.org/MedicalTherapy">
+                <meta itemprop="medicineSystem" content="Konuşma Terapisi" />
+                <meta itemprop="relevantSpecialty" content="Dil ve Konuşma Terapisi" />
+                <img src="images/floortime1.jpg" alt="Otizm tedavisi gösteren bir görsel" itemprop="image">
+                <h3 itemprop="name">Otizm ve Konuşma Terapisi</h3>
+                <p itemprop="description">Otizmli bireylerin sosyal ve dil becerilerini geliştirmeye yönelik özel terapi programları.</p>
+                <link itemprop="url" href="https://www.uskudardilkonusma.com/otizm/" />
             </article>
         
-            <article onclick="window.location.href='ses/';" class="service">
-                <img src="images/ses.jpg" alt="Ses Bozuklukları tedavisi gösteren bir görsel">
-                <h3>Ses Bozuklukları</h3>
-                <p>Ses tellerinde meydana gelen problemler nedeniyle sesin kalitesinde, tonunda ve yüksekliğinde değişiklikler.</p>
+            <article onclick="window.location.href='ses/';" class="service" itemscope itemtype="https://schema.org/MedicalTherapy">
+                <meta itemprop="medicineSystem" content="Konuşma Terapisi" />
+                <meta itemprop="relevantSpecialty" content="Dil ve Konuşma Terapisi" />
+                <img src="images/ses.jpg" alt="Ses Bozuklukları tedavisi gösteren bir görsel" itemprop="image">
+                <h3 itemprop="name">Ses Bozuklukları</h3>
+                <p itemprop="description">Ses tellerinde meydana gelen problemler nedeniyle sesin kalitesinde, tonunda ve yüksekliğinde değişiklikler.</p>
+                <link itemprop="url" href="https://www.uskudardilkonusma.com/ses/" />
             </article>
         
-            <article onclick="window.location.href='mkb/';" class="service">
-                <img src="images/brain.jpg" alt="Motor Konuşma Bozuklukları tedavisi gösteren bir görsel">
-                <h3>Motor Konuşma Bozuklukları</h3>
-                <p>Beyinden gelen konuşma sinyallerinin kaslara iletilmesi sürecindeki bozukluklar.</p>
+            <article onclick="window.location.href='mkb/';" class="service" itemscope itemtype="https://schema.org/MedicalTherapy">
+                <meta itemprop="medicineSystem" content="Konuşma Terapisi" />
+                <meta itemprop="relevantSpecialty" content="Dil ve Konuşma Terapisi" />
+                <img src="images/brain.jpg" alt="Motor Konuşma Bozuklukları tedavisi gösteren bir görsel" itemprop="image">
+                <h3 itemprop="name">Motor Konuşma Bozuklukları</h3>
+                <p itemprop="description">Beyinden gelen konuşma sinyallerinin kaslara iletilmesi sürecindeki bozukluklar.</p>
+                <link itemprop="url" href="https://www.uskudardilkonusma.com/mkb/" />
             </article>
 
-            <article onclick="window.location.href='floortime/';" class="service">
-                <img src="images/floortime.jpg" alt="Floortime terapisi gösteren bir görsel">
-                <h3>DIR Floortime Terapisi</h3>
-                <p>Otizmli bireylerin sosyal ve dil becerilerini geliştirmeye yönelik özel terapi programları.</p>
+            <article onclick="window.location.href='floortime/';" class="service" itemscope itemtype="https://schema.org/MedicalTherapy">
+                <meta itemprop="medicineSystem" content="Konuşma Terapisi" />
+                <meta itemprop="relevantSpecialty" content="Dil ve Konuşma Terapisi" />
+                <img src="images/floortime.jpg" alt="Floortime terapisi gösteren bir görsel" itemprop="image">
+                <h3 itemprop="name">DIR Floortime Terapisi</h3>
+                <p itemprop="description">Otizmli bireylerin sosyal ve dil becerilerini geliştirmeye yönelik özel terapi programları.</p>
+                <link itemprop="url" href="https://www.uskudardilkonusma.com/floortime/" />
             </article>
         
-            <article onclick="window.location.href='disleksi/';" class="service">
-                <img src="images/disleksi.jpg" alt="Disleksi tedavisi gösteren bir görsel">
-                <h3>Öğrenme Güçlüğü: Disleksi, disgrafi</h3>
-                <p>Öğrenme güçlüğü, bireyin bilişsel kapasitesinden bağımsız olarak, okuma, yazma, matematik veya dil gibi akademik becerilerde belirgin ve kalıcı zorluklarla karakterize edilen nörogelişimsel bir bozukluktur.</p>
+            <article onclick="window.location.href='disleksi/';" class="service" itemscope itemtype="https://schema.org/MedicalTherapy">
+                <meta itemprop="medicineSystem" content="Konuşma Terapisi" />
+                <meta itemprop="relevantSpecialty" content="Dil ve Konuşma Terapisi" />
+                <img src="images/disleksi.jpg" alt="Disleksi tedavisi gösteren bir görsel" itemprop="image">
+                <h3 itemprop="name">Öğrenme Güçlüğü: Disleksi, disgrafi</h3>
+                <p itemprop="description">Öğrenme güçlüğü, bireyin bilişsel kapasitesinden bağımsız olarak, okuma, yazma, matematik veya dil gibi akademik becerilerde belirgin ve kalıcı zorluklarla karakterize edilen nörogelişimsel bir bozukluktur.</p>
+                <link itemprop="url" href="https://www.uskudardilkonusma.com/disleksi/" />
             </article>
         
-            <article onclick="window.location.href='ccka/';" class="service">
-                <img src="images/prob.jpg" alt="Çocukluk Çağı Konuşma Apraksisi tedavisi gösteren bir görsel">
-                <h3>Çocukluk Çağı Konuşma Apraksisi</h3>
-                <p>Çocukluk çağı konuşma apraksisi, çocuğun konuşma kaslarını doğru sırayla ve koordineli bir şekilde hareket ettirmesini zorlaştıran nörolojik bir konuşma bozukluğudur.</p>
+            <article onclick="window.location.href='ccka/';" class="service" itemscope itemtype="https://schema.org/MedicalTherapy">
+                <meta itemprop="medicineSystem" content="Konuşma Terapisi" />
+                <meta itemprop="relevantSpecialty" content="Dil ve Konuşma Terapisi" />
+                <img src="images/prob.jpg" alt="Çocukluk Çağı Konuşma Apraksisi tedavisi gösteren bir görsel" itemprop="image">
+                <h3 itemprop="name">Çocukluk Çağı Konuşma Apraksisi</h3>
+                <p itemprop="description">Çocukluk çağı konuşma apraksisi, çocuğun konuşma kaslarını doğru sırayla ve koordineli bir şekilde hareket ettirmesini zorlaştıran nörolojik bir konuşma bozukluğudur.</p>
+                <link itemprop="url" href="https://www.uskudardilkonusma.com/ccka/" />
             </article>
 
-            <article onclick="window.location.href='down/';" class="service">
-                <img src="images/down.jpg" alt="Down Sendromu tedavisi gösteren bir görsel">
-                <h3>Down Sendromu</h3>
-                <p>Down sendromu, genetik bir farklılık olup bireylerde fazladan bir 21. kromozomun bulunmasıyla ortaya çıkar.  </p>
+            <article onclick="window.location.href='down/';" class="service" itemscope itemtype="https://schema.org/MedicalTherapy">
+                <meta itemprop="medicineSystem" content="Konuşma Terapisi" />
+                <meta itemprop="relevantSpecialty" content="Dil ve Konuşma Terapisi" />
+                <img src="images/down.jpg" alt="Down Sendromu tedavisi gösteren bir görsel" itemprop="image">
+                <h3 itemprop="name">Down Sendromu</h3>
+                <p itemprop="description">Down sendromu, genetik bir farklılık olup bireylerde fazladan bir 21. kromozomun bulunmasıyla ortaya çıkar.</p>
+                <link itemprop="url" href="https://www.uskudardilkonusma.com/down/" />
             </article>
         </section>
     </main>
@@ -217,6 +337,12 @@
             overflow: hidden;
             clip: rect(0, 0, 0, 0);
             border: 0;
+        }
+        
+        #services-heading {
+            text-align: center;
+            margin: 2rem 0;
+            color: #333;
         }
     </style>
 </body>
