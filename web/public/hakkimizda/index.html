@@ -3,8 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hakkımızda - Dil ve Konuşma Terapisi</title>
+    <title>Dil ve Konuşma Terapisi Merkezi | Hakkımızda</title>
+    <meta name="description" content="Dil ve konuşma terapisi alanında uzman kadromuz ve modern kliniğimizle Üsküdar'da hizmet veriyoruz. Misyonumuz, vizyonumuz ve değerlerimiz hakkında bilgi alın.">
+    <meta name="keywords" content="dil ve konuşma terapisi, üsküdar dil terapisi, konuşma terapisti, terapi merkezi, dil ve konuşma bozuklukları">
     <base href="/">
+    
+    <!-- Önbellek kontrolü -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/logo.png">
@@ -99,6 +106,63 @@
             startSlideShow();
         });
     </script>
+    
+    <style>
+        .profile-section {
+            margin: 50px 0;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        .profile-content {
+            display: grid;
+            grid-template-columns: 380px 1fr;
+            gap: 30px;
+            padding: 40px;
+            align-items: center;
+        }
+        
+        .profile-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: auto;
+        }
+        
+        .profile-img {
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #2C5282;
+            box-shadow: 0 8px 20px rgba(44, 82, 130, 0.2);
+        }
+        
+        @media (max-width: 768px) {
+            .profile-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 0;
+                padding: 20px;
+            }
+            
+            .profile-info {
+                padding: 0;
+            }
+            
+            .profile-info h2, .profile-info h3 {
+                text-align: center;
+            }
+            
+            .profile-img {
+                width: 280px;
+                height: 280px;
+                margin: 0 auto 20px;
+            }
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -232,8 +296,8 @@
 
     <div class="profile-section">
         <div class="profile-content">
-            <div class="profile-image">
-                <img src="images/pp.jpg" alt="Dkt. Buse Tunçel" class="profile-img">
+            <div class="profile-image" style="display: flex; justify-content: center; align-items: center; padding: 20px; height: auto;">
+                <img src="images/pp.jpg" alt="Dkt. Buse Tunçel" class="profile-img" style="width: 320px; height: 320px; border-radius: 50%; object-fit: cover; border: 5px solid #2C5282; box-shadow: 0 8px 20px rgba(44, 82, 130, 0.2);">
             </div>
             <div class="profile-info">
                 <h2>Dkt. Buse Tunçel</h2>
@@ -242,7 +306,6 @@
                     Merhaba, ben dil ve konuşma terapisti Buse Tunçel, 2022 yılında Üsküdar Üniversitesi Dil ve Konuşma Terapisi Bölümü lisans programından mezun oldum Nörobilim alanında yüksek lisansımı tamamladım. Aynı zamanda Dil ve Konuşma Terapisi Bölümü'nde yüksek lisans yapmaktayım. Çocuk ve yetişkinlerde görülen dil ve konuşma bozukluklarının değerlendirme ve terapisinde aktif olarak çalışıyorum. Benim hakkımda daha fazla bilgi edinmek profili görüntüle butonuna tıklayabilirsin.
                 </p>
                 <div class="profile-buttons">
-                    
                     <a href="https://www.doktorsitesi.com/buse-tuncel/dil-konusma-bozuklari-b/istanbul" class="profile-btn" target="_blank">
                         <i class="fas fa-external-link-alt"></i> Profili Görüntüle
                     </a>

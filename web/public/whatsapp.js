@@ -36,3 +36,24 @@ document.addEventListener('DOMContentLoaded', createWhatsAppButton);
 
 // Sayfa tamamen yüklendiğinde de kontrol et (bazı durumlarda DOMContentLoaded olayı atlanabilir)
 window.addEventListener('load', createWhatsAppButton); 
+
+
+<button id="whatsapp-button" class="whatsapp-button">WP Butonu</button>
+
+
+    const button = document.getElementById('whatsapp-button');
+
+    function startBlinking() {
+        let isFaded = false;
+        setInterval(() => {
+            if (isFaded) {
+                button.style.opacity = '1';
+            } else {
+                button.style.opacity = '0.5';
+            }
+            isFaded = !isFaded;
+        }, 500); // 500 milisaniye aralıklarla yanıp sönme
+    }
+
+    // Sayfa yüklendiğinde animasyonu başlat
+    window.onload = startBlinking;

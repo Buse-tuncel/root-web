@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Dil ve Konuşma Terapisi | Uzaktan Terapi Hizmetleri</title>
+    <meta name="description" content="Uzman terapistlerimizle online dil ve konuşma terapisi hizmetlerimizden faydalanın. Evden çıkmadan profesyonel teleterapi seansları ile dil ve konuşma bozukluklarının tedavisi.">
+    <meta name="keywords" content="online dil ve konuşma terapisi, uzaktan terapi, teleterapi, online konuşma terapisi, online dil terapisi, uzaktan konuşma terapisi, evden terapi">
+    <base href="/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo.png">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9XQBVB710B"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-9XQBVB710B');
+    </script>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="whatsapp.css">
+    <script defer src="footer.js"></script>
+    <script defer src="navbar.js"></script>
+    <script defer src="whatsapp.js"></script>
+    <style>
+        .teletherapy-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .teletherapy-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .teletherapy-header h1 {
+            color: #2C5282;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+        
+        .teletherapy-header p {
+            color: #4A5568;
+            font-size: 1.1em;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .teletherapy-benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .benefit-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            padding: 25px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        }
+        
+        .benefit-card h3 {
+            color: #2C5282;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+        }
+        
+        .benefit-card p {
+            color: #4A5568;
+            line-height: 1.6;
+        }
+        
+        .teletherapy-process {
+            background: #f8f9fa;
+            padding: 50px 20px;
+            border-radius: 12px;
+            margin-bottom: 60px;
+        }
+        
+        .teletherapy-process h2 {
+            text-align: center;
+            color: #2C5282;
+            font-size: 2em;
+            margin-bottom: 40px;
+        }
+        
+        .process-steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+        
+        .step {
+            flex: 1;
+            min-width: 200px;
+            max-width: 250px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .step-number {
+            background: #2C5282;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin: 0 auto 20px;
+        }
+        
+        .step h3 {
+            color: #2C5282;
+            margin-bottom: 10px;
+        }
+        
+        .step p {
+            color: #4A5568;
+            font-size: 0.95em;
+        }
+        
+        .teletherapy-faq {
+            margin-bottom: 60px;
+        }
+        
+        .teletherapy-faq h2 {
+            text-align: center;
+            color: #2C5282;
+            font-size: 2em;
+            margin-bottom: 40px;
+        }
+        
+        .faq-item {
+            margin-bottom: 20px;
+            border: 1px solid #E2E8F0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            background: #F7FAFC;
+            padding: 15px 20px;
+            font-weight: 500;
+            color: #2D3748;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-answer {
+            padding: 20px;
+            background: white;
+            line-height: 1.6;
+            color: #4A5568;
+        }
+        
+        .cta-section {
+            text-align: center;
+            background: #EBF8FF;
+            padding: 60px 20px;
+            border-radius: 12px;
+        }
+        
+        .cta-section h2 {
+            color: #2C5282;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            color: #4A5568;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #2C5282;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            background: #1A365D;
+        }
+        
+        @media (max-width: 768px) {
+            .teletherapy-header h1 {
+                font-size: 2em;
+            }
+            
+            .process-steps {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .step {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar-container"></div>
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+                const script = document.createElement('script');
+                script.src = 'navbar.js';
+                document.body.appendChild(script);
+            });
+    </script>
+
+    <div class="teletherapy-container">
+        <div class="teletherapy-header">
+            <h1>Online Dil ve Konuşma Terapisi</h1>
+            <p>Teknolojinin sunduğu imkanlarla dil ve konuşma terapisi artık evinizde! Uzman terapistlerimizle bilgisayar, tablet veya akıllı telefonunuz üzerinden gerçekleştirilen online terapi seanslarıyla, zaman ve mekan sınırlaması olmadan profesyonel destek alın.</p>
+        </div>
+        
+        <div class="teletherapy-benefits">
+            <div class="benefit-card">
+                <h3>Zaman ve Mekan Esnekliği</h3>
+                <p>Online terapi, yoğun iş ve okul programlarında, ulaşım zorluğu yaşayan durumlarda veya seyahat halindeyken bile terapi almanızı sağlar. Evinizin konforunda, size en uygun saatte terapinizi gerçekleştirebilirsiniz.</p>
+            </div>
+            
+            <div class="benefit-card">
+                <h3>Aynı Kalitede Terapi</h3>
+                <p>Araştırmalar, online dil ve konuşma terapisinin, yüz yüze terapi kadar etkili olduğunu göstermektedir. Uzman terapistlerimiz, online ortamda da aynı profesyonel desteği ve ilgiyi sunmaktadır.</p>
+            </div>
+            
+            <div class="benefit-card">
+                <h3>Güvenli ve Erişilebilir</h3>
+                <p>Özellikle salgın hastalık dönemlerinde veya bağışıklık sistemi hassas olan kişiler için güvenli bir alternatif sunar. Ayrıca uzak mesafelerden, farklı şehirlerden veya ülkelerden de hizmet almanızı sağlar.</p>
+            </div>
+            
+            <div class="benefit-card">
+                <h3>Aile Katılımı</h3>
+                <p>Online terapi, aile üyelerinin de sürece daha kolay dahil olmasını sağlar. Özellikle çocuklar için ev ortamında yapılan çalışmalar, öğrenilenlerin günlük yaşama daha hızlı transfer edilmesine yardımcı olur.</p>
+            </div>
+            
+            <div class="benefit-card">
+                <h3>Ekonomik Avantaj</h3>
+                <p>Ulaşım masrafları ve zaman kaybı olmadan, doğrudan terapi hizmetine erişebilirsiniz. Bu da hem maddi hem de zaman açısından tasarruf sağlar.</p>
+            </div>
+            
+            <div class="benefit-card">
+                <h3>Süreklilik ve Düzenlilik</h3>
+                <p>Hava koşulları, trafik gibi dış faktörlerden etkilenmeden, düzenli ve kesintisiz olarak terapinize devam edebilirsiniz. Bu da tedavi sürecinin sürekliliğini sağlayarak daha hızlı ilerleme kaydedilmesine yardımcı olur.</p>
+            </div>
+        </div>
+        
+        <div class="teletherapy-process">
+            <h2>Online Terapi Süreci Nasıl İşler?</h2>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>İletişim</h3>
+                    <p>Bizimle iletişime geçin ve online terapi hakkında bilgi alın. İhtiyaçlarınızı ve beklentilerinizi paylaşın.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Değerlendirme</h3>
+                    <p>İlk görüşmede uzmanımız detaylı bir değerlendirme yaparak ihtiyaçlarınızı belirler ve size özel bir terapi planı oluşturur.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Teknik Hazırlık</h3>
+                    <p>Size gönderilen bağlantı ile güvenli görüntülü görüşme platformuna giriş yaparsınız. Basit bir teknik kontrol yaparak her şeyin hazır olduğundan emin oluruz.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Terapi Seansları</h3>
+                    <p>Düzenli online seanslarla, kişiselleştirilmiş terapi programınızı uygularız. Her seans sonunda ev ödevi ve pratik öneriler sunulur.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <h3>İlerleme Takibi</h3>
+                    <p>Düzenli değerlendirmelerle ilerlemenizi takip eder, gerektiğinde terapi planınızı güncelleriz.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="teletherapy-faq">
+            <h2>Sıkça Sorulan Sorular</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    Online terapi için hangi ekipmanlara ihtiyacım var?
+                </div>
+                <div class="faq-answer">
+                    İnternete bağlı bir bilgisayar, tablet veya akıllı telefon, kamera, mikrofon ve hoparlör/kulaklık yeterlidir. Çoğu modern cihazda bunlar zaten entegre olarak bulunmaktadır. İdeal bir terapi deneyimi için stabil bir internet bağlantısı ve sessiz bir ortam da önerilir.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    Online terapi tüm yaş grupları için uygun mudur?
+                </div>
+                <div class="faq-answer">
+                    Evet, ancak özellikle küçük çocuklar için bir ebeveyn veya bakıcının seanslar sırasında yanında bulunması gerekebilir. Yaşlı bireyler için de teknoloji kullanımında yardıma ihtiyaç duyulabilir. Her yaş ve durum için bireysel değerlendirme yaparak en uygun terapi yaklaşımını belirleriz.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    Online terapide gizlilik ve güvenlik nasıl sağlanır?
+                </div>
+                <div class="faq-answer">
+                    Tüm online terapi seanslarımız, KVKK ve uluslararası gizlilik standartlarına uygun, şifreli ve güvenli platformlar üzerinden gerçekleştirilir. Seans kayıtları ve kişisel bilgileriniz güvenli sistemlerde saklanır ve terapi amaçları dışında kullanılmaz.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    Online terapi fiyatları yüz yüze terapiden farklı mıdır?
+                </div>
+                <div class="faq-answer">
+                    Online terapi fiyatlarımız genellikle yüz yüze terapi ile aynıdır, çünkü sunulan profesyonel hizmetin kalitesi ve süresi aynıdır. Ancak bazen uzun süreli paketlerde özel indirimler sunulabilmektedir. Güncel fiyat bilgisi için lütfen bizimle iletişime geçin.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    Online terapi hangi dil ve konuşma bozuklukları için uygundur?
+                </div>
+                <div class="faq-answer">
+                    Online terapi; kekemelik, artikülasyon bozuklukları, ses bozuklukları, dil gelişim geriliği, afazi, öğrenme güçlükleri gibi pek çok dil ve konuşma bozukluğunun tedavisinde etkili şekilde kullanılabilir. Bazı durumlarda hibrit (hem online hem yüz yüze) bir yaklaşım da önerilebilir.
+                </div>
+            </div>
+        </div>
+        
+        <div class="cta-section">
+            <h2>Online Dil ve Konuşma Terapisine Bugün Başlayın</h2>
+            <p>Uzman dil ve konuşma terapistlerimizle, teknolojinin sağladığı imkanlardan faydalanarak, evden çıkmadan profesyonel terapi hizmetimizden yararlanabilirsiniz. İlk değerlendirme görüşmesi için hemen iletişime geçin.</p>
+            <a href="iletisim/" class="cta-button">Randevu Alın</a>
+        </div>
+    </div>
+
+    <div id="footer-container"></div>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            });
+    </script>
+</body>
+</html> 

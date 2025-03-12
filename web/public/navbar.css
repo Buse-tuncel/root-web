@@ -4,12 +4,14 @@
     justify-content: space-between;
     align-items: center;
     background-color: #F7F7F7;
-    padding: 10px 100px;
+    padding: 10px 20px;
     height: 80px;
+    position: relative;
+    z-index: 1000; /* Slider ile çakışmaması için yüksek z-index */
 }
 
 .navbar .logo {
-    padding-left: 40px;
+    padding-left: 20px;
 }
 
 .navbar .logo img {
@@ -34,8 +36,8 @@
     list-style: none;
     display: flex;
     align-items: center;
-    gap: 80px;
-    padding-right: 70px;
+    gap: 40px;
+    padding-right: 20px;
     margin: 0;
     height: 100%;
 }
@@ -48,7 +50,7 @@
 }
 
 .nav-links a {
-    color: #B39DDB;
+    color: #2C5282; /* Site renk şemasına uygun renk */
     text-decoration: none;
     font-size: 18px;
     height: 40px;
@@ -56,39 +58,74 @@
     align-items: center;
     justify-content: center;
     padding: 0 20px;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 0.3s ease;
     border-radius: 8px;
     margin-top: 20px;
     transform-origin: center;
+    font-weight: 500;
 }
 
 .nav-links a:hover {
-    color: #673AB7;
-    background-color: rgba(179, 157, 219, 0.1);
+    color: #4299E1; /* Hover durumunda açık mavi */
+    background-color: rgba(44, 82, 130, 0.1);
     transform: scale(1.05);
-    box-shadow: 0 4px 15px rgba(179, 157, 219, 0.3);
 }
 
 /* Mobil menü için */
 .menu-toggle {
     font-size: 28px;
-    color: white;
+    color: #2C5282; /* Site renk şemasına uygun renk */
     cursor: pointer;
     display: none;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 
 /* Responsive tasarım */
 @media (max-width: 768px) {
+    .navbar {
+        padding: 10px 15px;
+    }
+    
+    .navbar .logo {
+        padding-left: 0;
+    }
+    
     .nav-links {
         display: none;
         flex-direction: column;
-        background-color: rgb(95, 158, 93);
+        background-color: #2C5282; /* Site renk şemasına uygun renk */
         position: absolute;
-        top: 60px;
+        top: 80px; /* Navbar yüksekliği kadar aşağıda başlar */
+        left: 0;
         right: 0;
         width: 100%;
         text-align: center;
-        padding: 20px 0;
+        padding: 0;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        z-index: 999; /* Slider ile çakışmaması için yüksek z-index */
+        border-radius: 0 0 10px 10px;
+    }
+
+    .nav-links li {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .nav-links a {
+        color: white;
+        width: 100%;
+        padding: 15px 0;
+        margin: 0;
+        border-radius: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .nav-links a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: white;
+        transform: none;
     }
 
     .nav-links.active {
@@ -97,76 +134,13 @@
 
     .menu-toggle {
         display: block;
-        font-size: 28px;
-        color: white;
-        cursor: pointer;
-        padding: 10px;
     }
 }
-/* Mobil menü için */
-.menu-toggle {
-    font-size: 28px;
-    color: white;
-    cursor: pointer;
-    display: none;
-}
 
-/* Responsive tasarım */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column-reverse;
-        background-color: rgb(95, 158, 93);
-        position: relative;
-        top: 60px;
-        right: 0;
-        width: 100%;
-        text-align: center;
-        padding: 20px 0;
-    }
-
-    .nav-links.active {
-        display: display;
-    }
-
-    
-}
-/* Mobil menü için stil */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none; /* Başlangıçta menü gizli */
-        flex-direction: column;
-        background-color: rgb(95, 158, 93);
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 100%;
-        text-align: center;
-        padding: 20px 0;
-    }
-
-    .nav-links.active {
-        display: flex; /* Açılınca görünür yap */
-    }
-
-    .menu-toggle {
-        display: block;
-        font-size: 28px;
-        color: white;
-        cursor: pointer;
-        padding: 10px;
-    }
-}
 .nav-links a::after {
     display: none;
 }
 
 .nav-links a:hover::after {
     display: none;
-}
-
-.logo img{
-    width: 60px;
-    height: 60px;
-    padding-top: 8px;
 }

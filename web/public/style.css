@@ -116,23 +116,29 @@ body {
     overflow: hidden;
 }
 
-.profile-content {
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    gap: 30px;
-    padding: 40px;
-}
-
 .profile-image {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    height: auto;
 }
 
 .profile-img {
-    width: 250px;
-    height: 250px;
+    width: 320px;
+    height: 320px;
     border-radius: 50%;
     object-fit: cover;
     border: 5px solid #2C5282;
+    box-shadow: 0 8px 20px rgba(44, 82, 130, 0.2);
+}
+
+.profile-content {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 30px;
+    padding: 40px;
+    align-items: center;
 }
 
 .profile-info {
@@ -193,6 +199,16 @@ body {
     .profile-content {
         grid-template-columns: 1fr;
         text-align: center;
+        gap: 0;
+        padding: 20px;
+    }
+
+    .profile-info {
+        padding: 0;
+    }
+
+    .profile-info h2, .profile-info h3 {
+        text-align: center;
     }
 
     .profile-buttons {
@@ -200,8 +216,9 @@ body {
     }
 
     .profile-img {
-        width: 200px;
-        height: 200px;
+        width: 280px;
+        height: 280px;
+        margin: 0 auto 20px;
     }
 }
 
@@ -238,6 +255,7 @@ body {
     height: 80vh !important;
     max-width: 1400px; /* Maksimum genişlik */
     margin: 0 auto; /* Merkezde */
+    z-index: 1; /* Navbar'ın altında kalması için düşük z-index */
 }
 
 /* Slayt Bireysel */
