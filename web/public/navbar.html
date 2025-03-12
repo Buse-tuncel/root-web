@@ -5,12 +5,12 @@
     <link rel="icon" type="image/png" href="images/logo.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="navbar.css">
-    <script defer src="navbar.js"></script>
+    <link rel="stylesheet" href="navbar.css?v=1.1">
+    <script defer src="navbar.js?v=1.1"></script>
 </head>
 <body>
     <nav class="navbar">
-        <div class="logo"> <img src="images/logo.png" alt="Dil ve Konuşma Terapisi Logo"></div>
+        <div class="logo"> <img src="images/logo.png" alt="Dil ve Konuşma Terapisi Merkezi Logo"></div>
         <ul class="nav-links">
             <li><a href="/">Anasayfa</a></li>
             <li><a href="hakkimizda/">Hakkımızda</a></li>
@@ -18,7 +18,10 @@
             <li><a href="iletisim/">İletişim</a></li>            
             <li><a href="teleterapi/">Online Terapi</a></li>
         </ul>
-        <div class="menu-toggle" onclick="toggleMenu()" aria-label="Menüyü Aç/Kapa">&#9776;</div>
+        <div class="menu-toggle" onclick="toggleMenu()" aria-label="Menüyü aç/kapat">&#9776;</div>
     </nav>
+    
+    <!-- Menü overlay elemanı ekle -->
+    <div class="menu-overlay" onclick="toggleMenu()"></div>
 </body>
 </html> 

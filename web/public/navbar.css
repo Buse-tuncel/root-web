@@ -7,11 +7,11 @@
     padding: 10px 20px;
     height: 80px;
     position: relative;
-    z-index: 1000; /* Slider ile çakışmaması için yüksek z-index */
+    z-index: 1000;
 }
 
 .navbar .logo {
-    padding-left: 20px;
+    padding-left: 10px;
 }
 
 .navbar .logo img {
@@ -36,8 +36,8 @@
     list-style: none;
     display: flex;
     align-items: center;
-    gap: 40px;
-    padding-right: 20px;
+    gap: 20px;
+    padding-right: 10px;
     margin: 0;
     height: 100%;
 }
@@ -50,14 +50,14 @@
 }
 
 .nav-links a {
-    color: #2C5282; /* Site renk şemasına uygun renk */
+    color: #2C5282;
     text-decoration: none;
     font-size: 18px;
     height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 20px;
+    padding: 0 12px;
     transition: all 0.3s ease;
     border-radius: 8px;
     margin-top: 20px;
@@ -66,15 +66,31 @@
 }
 
 .nav-links a:hover {
-    color: #4299E1; /* Hover durumunda açık mavi */
+    color: #4299E1;
     background-color: rgba(44, 82, 130, 0.1);
     transform: scale(1.05);
+}
+
+/* Overlay - Açılır menü ile slider karışmasını önlemek için */
+.menu-overlay {
+    display: none;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+}
+
+.menu-overlay.active {
+    display: block;
 }
 
 /* Mobil menü için */
 .menu-toggle {
     font-size: 28px;
-    color: #2C5282; /* Site renk şemasına uygun renk */
+    color: #2C5282;
     cursor: pointer;
     display: none;
     padding: 5px 10px;
@@ -94,16 +110,16 @@
     .nav-links {
         display: none;
         flex-direction: column;
-        background-color: #2C5282; /* Site renk şemasına uygun renk */
+        background-color: #2C5282;
         position: absolute;
-        top: 80px; /* Navbar yüksekliği kadar aşağıda başlar */
+        top: 80px;
         left: 0;
         right: 0;
         width: 100%;
         text-align: center;
         padding: 0;
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-        z-index: 999; /* Slider ile çakışmaması için yüksek z-index */
+        z-index: 999;
         border-radius: 0 0 10px 10px;
     }
 
@@ -137,6 +153,7 @@
     }
 }
 
+/* Eski stilleri temizle */
 .nav-links a::after {
     display: none;
 }

@@ -2,8 +2,10 @@
 function toggleMenu() {
     var menu = document.querySelector(".nav-links");
     var menuToggle = document.querySelector(".menu-toggle");
+    var overlay = document.querySelector(".menu-overlay");
     
     menu.classList.toggle("active"); // Menüyü aç/kapa
+    overlay.classList.toggle("active"); // Overlay'i aç/kapa
     
     // Menü açıkken arka planı değiştir
     if (menu.classList.contains("active")) {
@@ -18,6 +20,7 @@ function toggleMenu() {
     document.addEventListener('scroll', function() {
         if (menu.classList.contains("active")) {
             menu.classList.remove("active");
+            overlay.classList.remove("active");
             menuToggle.style.backgroundColor = "transparent";
             menuToggle.style.color = "#2C5282";
         }
