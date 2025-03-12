@@ -8,7 +8,7 @@
     <meta name="keywords" content="dil ve konuşma terapisi, üsküdar dil terapisi, konuşma terapisti, terapi merkezi, dil ve konuşma bozuklukları">
     <base href="/">
     
-    <!-- Önbellek kontrolü -->
+    <!-- Önbellek kontrolü - Tarayıcıya içeriği her zaman yeniden yüklemesini söyler -->
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
@@ -26,85 +26,112 @@
       gtag('config', 'G-9XQBVB710B');
     </script>
     
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="navbar.css">
-    <link rel="stylesheet" href="footer.css">
-    <link rel="stylesheet" href="whatsapp.css">
-    <script defer src="navbar.js"></script>
-    <script defer src="footer.js"></script>
-    <script defer src="whatsapp.js"></script>
+    <!-- CSS Dosyaları - Önbellekten kaçınmak için sürüm parametresi ekliyoruz -->
+    <link rel="stylesheet" href="style.css?v=1.1">
+    <link rel="stylesheet" href="navbar.css?v=1.1">
+    <link rel="stylesheet" href="footer.css?v=1.1">
+    <link rel="stylesheet" href="whatsapp.css?v=1.1">
+    
+    <!-- JS Dosyaları - Önbellekten kaçınmak için sürüm parametresi ekliyoruz -->
+    <script defer src="navbar.js?v=1.1"></script>
+    <script defer src="footer.js?v=1.1"></script>
+    <script defer src="whatsapp.js?v=1.1"></script>
+    
+    <!-- Önbellek temizleme script -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const slides = document.querySelectorAll('.slide');
-            const indicators = document.querySelectorAll('.indicator');
-            const prevButton = document.querySelector('.prev');
-            const nextButton = document.querySelector('.next');
-            let currentSlide = 0;
-            const slideCount = slides.length;
-            let slideInterval;
-
-            function showSlide(index) {
-                slides.forEach(slide => slide.classList.remove('active'));
-                indicators.forEach(indicator => indicator.classList.remove('active'));
-                
-                slides[index].classList.add('active');
-                indicators[index].classList.add('active');
-                currentSlide = index;
-            }
-
-            function nextSlide() {
-                let nextIndex = (currentSlide + 1) % slideCount;
-                showSlide(nextIndex);
-            }
-
-            function prevSlide() {
-                let prevIndex = (currentSlide - 1 + slideCount) % slideCount;
-                showSlide(prevIndex);
-            }
-
-            function startSlideShow() {
-                stopSlideShow();
-                slideInterval = setInterval(nextSlide, 5000);
-            }
-
-            function stopSlideShow() {
-                if (slideInterval) {
-                    clearInterval(slideInterval);
-                }
-            }
-
-            // Ok tuşları için event listener'ları
-            prevButton.addEventListener('click', function(e) {
-                e.preventDefault();
-                prevSlide();
-                stopSlideShow();
-                startSlideShow();
-            });
-
-            nextButton.addEventListener('click', function(e) {
-                e.preventDefault();
-                nextSlide();
-                stopSlideShow();
-                startSlideShow();
-            });
-
-            // İndikatörler için event listener'lar
-            indicators.forEach((indicator, index) => {
-                indicator.addEventListener('click', function() {
-                    showSlide(index);
-                    stopSlideShow();
-                    startSlideShow();
-                });
-            });
-
-            // Hover durumunda otomatik geçişi durdur
-            const sliderContainer = document.querySelector('.slider-container');
-            sliderContainer.addEventListener('mouseenter', stopSlideShow);
-            sliderContainer.addEventListener('mouseleave', startSlideShow);
-
-            // Başlangıçta slider'ı başlat
-            startSlideShow();
+      // Sayfaya her girişte CSS dosyalarını yeniden yükler
+      document.addEventListener("DOMContentLoaded", function() {
+        const links = document.querySelectorAll('link[rel="stylesheet"]');
+        links.forEach(link => {
+          const url = new URL(link.href);
+          url.searchParams.set('refresh', Date.now());
+          link.href = url.toString();
         });
+        
+        // Açılır menü işlevselliğini kontrol et
+        if (typeof toggleMenu !== 'function') {
+          console.error("toggleMenu fonksiyonu bulunamadı! navbar.js dosyası yüklenemiyor olabilir.");
+        }
+      });
+    </script>
+    
+    <!-- Slider için JavaScript -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          const slides = document.querySelectorAll('.slide');
+          const indicators = document.querySelectorAll('.indicator');
+          const prevButton = document.querySelector('.prev');
+          const nextButton = document.querySelector('.next');
+          let currentSlide = 0;
+          const slideCount = slides.length;
+          let slideInterval;
+
+          function showSlide(index) {
+              slides.forEach(slide => slide.classList.remove('active'));
+              indicators.forEach(indicator => indicator.classList.remove('active'));
+              
+              slides[index].classList.add('active');
+              indicators[index].classList.add('active');
+              currentSlide = index;
+          }
+
+          function nextSlide() {
+              let nextIndex = (currentSlide + 1) % slideCount;
+              showSlide(nextIndex);
+          }
+
+          function prevSlide() {
+              let prevIndex = (currentSlide - 1 + slideCount) % slideCount;
+              showSlide(prevIndex);
+          }
+
+          function startSlideShow() {
+              stopSlideShow();
+              slideInterval = setInterval(nextSlide, 5000);
+          }
+
+          function stopSlideShow() {
+              if (slideInterval) {
+                  clearInterval(slideInterval);
+              }
+          }
+
+          // Ok tuşları için event listener'ları
+          if (prevButton && nextButton) {
+              prevButton.addEventListener('click', function(e) {
+                  e.preventDefault();
+                  prevSlide();
+                  stopSlideShow();
+                  startSlideShow();
+              });
+
+              nextButton.addEventListener('click', function(e) {
+                  e.preventDefault();
+                  nextSlide();
+                  stopSlideShow();
+                  startSlideShow();
+              });
+          }
+
+          // İndikatörler için event listener'lar
+          indicators.forEach((indicator, index) => {
+              indicator.addEventListener('click', function() {
+                  showSlide(index);
+                  stopSlideShow();
+                  startSlideShow();
+              });
+          });
+
+          // Hover durumunda otomatik geçişi durdur
+          const sliderContainer = document.querySelector('.slider-container');
+          if (sliderContainer) {
+              sliderContainer.addEventListener('mouseenter', stopSlideShow);
+              sliderContainer.addEventListener('mouseleave', startSlideShow);
+          }
+
+          // Başlangıçta slider'ı başlat
+          startSlideShow();
+      });
     </script>
     
     <style>
@@ -162,19 +189,220 @@
                 margin: 0 auto 20px;
             }
         }
+        
+        /* Navbar stilleri */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #F7F7F7;
+            padding: 10px 20px;
+            height: 80px;
+            position: relative;
+            z-index: 1000;
+        }
+
+        .navbar .logo {
+            padding-left: 10px;
+        }
+
+        .navbar .logo img {
+            height: 60px;
+            width: auto;
+            vertical-align: middle;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding-right: 10px;
+            margin: 0;
+            height: 100%;
+        }
+
+        .nav-links li {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            padding: 0;
+        }
+
+        .nav-links a {
+            color: #2C5282;
+            text-decoration: none;
+            font-size: 18px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 12px;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            margin-top: 20px;
+            transform-origin: center;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #4299E1;
+            background-color: rgba(44, 82, 130, 0.1);
+            transform: scale(1.05);
+        }
+
+        .menu-toggle {
+            font-size: 28px;
+            color: #2C5282;
+            cursor: pointer;
+            display: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        /* Overlay - Açılır menü ile slider karışmasını önlemek için */
+        .menu-overlay {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 998;
+        }
+        
+        .menu-overlay.active {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 10px 15px;
+            }
+            
+            .navbar .logo {
+                padding-left: 0;
+            }
+            
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background-color: #2C5282;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                right: 0;
+                width: 100%;
+                text-align: center;
+                padding: 0;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+                z-index: 999;
+                border-radius: 0 0 10px 10px;
+            }
+
+            .nav-links li {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+            }
+
+            .nav-links a {
+                color: white;
+                width: 100%;
+                padding: 15px 0;
+                margin: 0;
+                border-radius: 0;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+            
+            .nav-links a:hover {
+                background-color: rgba(255, 255, 255, 0.1);
+                color: white;
+                transform: none;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+        }
+        
+        /* Hero bölümü için z-index ayarı */
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 80vh !important;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            text-align: center;
+            margin-top: 0;
+            z-index: 1;
+        }
+        
+        /* Slider alanının z-index'i */
+        .slider-container {
+            position: relative;
+            z-index: 2;
+        }
     </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo"> <img src="images/logo.png" alt=""></div>
-        <ul class="nav-links">
-            <li><a href="/">Anasayfa</a></li>
-            <li><a href="hakkimizda/">Hakkımızda</a></li>
-            <li><a href="hizmetler/">Hizmetler</a></li>
-            <li><a href="iletisim/">İletişim</a></li>            
-        </ul>
-        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
-    </nav>
+    <header>
+        <nav class="navbar" aria-label="Ana Navigasyon">
+            <div class="logo"> <img src="images/logo.png" alt="Dil ve Konuşma Terapisi Merkezi Logo"></div>
+            <ul class="nav-links">
+                <li><a href="/">Anasayfa</a></li>
+                <li><a href="hakkimizda/">Hakkımızda</a></li>
+                <li><a href="hizmetler/">Hizmetler</a></li>
+                <li><a href="iletisim/">İletişim</a></li>   
+                <li><a href="teleterapi/">Online Terapi</a></li>         
+            </ul>
+            <div class="menu-toggle" onclick="toggleMenu()" aria-label="Menüyü aç/kapat">&#9776;</div>
+        </nav>
+        
+        <!-- Menü overlay elemanı ekle -->
+        <div class="menu-overlay" onclick="toggleMenu()"></div>
+    </header>
+    
+    <!-- Mobil menü işlevselliği için inline script -->
+    <script>
+      // Mobil menü için toggle fonksiyonu
+      function toggleMenu() {
+          var menu = document.querySelector(".nav-links");
+          var menuToggle = document.querySelector(".menu-toggle");
+          var overlay = document.querySelector(".menu-overlay");
+          
+          menu.classList.toggle("active"); // Menüyü aç/kapa
+          overlay.classList.toggle("active"); // Overlay'i aç/kapa
+          
+          // Menü açıkken arka planı değiştir
+          if (menu.classList.contains("active")) {
+              menuToggle.style.backgroundColor = "#2C5282";
+              menuToggle.style.color = "white";
+          } else {
+              menuToggle.style.backgroundColor = "transparent";
+              menuToggle.style.color = "#2C5282";
+          }
+          
+          // Sayfa kaydırıldığında menüyü kapat
+          document.addEventListener('scroll', function() {
+              if (menu.classList.contains("active")) {
+                  menu.classList.remove("active");
+                  overlay.classList.remove("active");
+                  menuToggle.style.backgroundColor = "transparent";
+                  menuToggle.style.color = "#2C5282";
+              }
+          }, {once: true});
+      }
+    </script>
 
     <header class="hero">
         <div class="slider-container">

@@ -159,10 +159,167 @@
     <script defer src="script.js"></script>
     <link rel="stylesheet" href="footer.css">
     <script defer src="footer.js"></script>
-    <link rel="stylesheet" href="navbar.css">
-    <script defer src="navbar.js"></script>
+    <link rel="stylesheet" href="navbar.css?v=1.1">
+    <script defer src="navbar.js?v=1.1"></script>
     <link rel="stylesheet" href="whatsapp.css">
     <script defer src="whatsapp.js"></script>
+    
+    <!-- Inline navbar stilleri -->
+    <style>
+        /* Navbar stilleri */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #F7F7F7;
+            padding: 10px 20px;
+            height: 80px;
+            position: relative;
+            z-index: 1000;
+        }
+
+        .navbar .logo {
+            padding-left: 10px;
+        }
+
+        .navbar .logo img {
+            height: 60px;
+            width: auto;
+            vertical-align: middle;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding-right: 10px;
+            margin: 0;
+            height: 100%;
+        }
+
+        .nav-links li {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            padding: 0;
+        }
+
+        .nav-links a {
+            color: #2C5282;
+            text-decoration: none;
+            font-size: 18px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 12px;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            margin-top: 20px;
+            transform-origin: center;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #4299E1;
+            background-color: rgba(44, 82, 130, 0.1);
+            transform: scale(1.05);
+        }
+
+        .menu-toggle {
+            font-size: 28px;
+            color: #2C5282;
+            cursor: pointer;
+            display: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        /* Overlay - Açılır menü ile slider karışmasını önlemek için */
+        .menu-overlay {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 998;
+        }
+        
+        .menu-overlay.active {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 10px 15px;
+            }
+            
+            .navbar .logo {
+                padding-left: 0;
+            }
+            
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background-color: #2C5282;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                right: 0;
+                width: 100%;
+                text-align: center;
+                padding: 0;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+                z-index: 999;
+                border-radius: 0 0 10px 10px;
+            }
+
+            .nav-links li {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+            }
+
+            .nav-links a {
+                color: white;
+                width: 100%;
+                padding: 15px 0;
+                margin: 0;
+                border-radius: 0;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+            
+            .nav-links a:hover {
+                background-color: rgba(255, 255, 255, 0.1);
+                color: white;
+                transform: none;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+        }
+        
+        /* Hero bölümü için z-index ayarı */
+        .hero {
+            position: relative;
+            z-index: 1;
+            margin-top: 0;
+        }
+        
+        /* Slider container için pozisyon ayarı */
+        .slider-container {
+            position: relative;
+            z-index: 2;
+        }
+    </style>
 
 </head>
 <body>
@@ -173,11 +330,47 @@
                 <li><a href="/" aria-current="page">Anasayfa</a></li>
                 <li><a href="hakkimizda/">Hakkımızda</a></li>
                 <li><a href="hizmetler/">Hizmetler</a></li>
-                <li><a href="iletisim/">İletişim</a></li>            
+                <li><a href="iletisim/">İletişim</a></li>   
+                <li><a href="teleterapi/">Online Terapi</a></li>         
             </ul>
-            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menüyü aç/kapat">&#9776;</button>
+            <div class="menu-toggle" onclick="toggleMenu()" aria-label="Menüyü aç/kapat">&#9776;</div>
         </nav>
+        
+        <!-- Menü overlay elemanı ekle -->
+        <div class="menu-overlay" onclick="toggleMenu()"></div>
     </header>
+    
+    <!-- Mobil menü işlevselliği için inline script -->
+    <script>
+      // Mobil menü için toggle fonksiyonu
+      function toggleMenu() {
+          var menu = document.querySelector(".nav-links");
+          var menuToggle = document.querySelector(".menu-toggle");
+          var overlay = document.querySelector(".menu-overlay");
+          
+          menu.classList.toggle("active"); // Menüyü aç/kapa
+          overlay.classList.toggle("active"); // Overlay'i aç/kapa
+          
+          // Menü açıkken arka planı değiştir
+          if (menu.classList.contains("active")) {
+              menuToggle.style.backgroundColor = "#2C5282";
+              menuToggle.style.color = "white";
+          } else {
+              menuToggle.style.backgroundColor = "transparent";
+              menuToggle.style.color = "#2C5282";
+          }
+          
+          // Sayfa kaydırıldığında menüyü kapat
+          document.addEventListener('scroll', function() {
+              if (menu.classList.contains("active")) {
+                  menu.classList.remove("active");
+                  overlay.classList.remove("active");
+                  menuToggle.style.backgroundColor = "transparent";
+                  menuToggle.style.color = "#2C5282";
+              }
+          }, {once: true});
+      }
+    </script>
     
     <!-- Hero Slider -->
     <main>
