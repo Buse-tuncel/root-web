@@ -62,15 +62,23 @@
     </script>
     
     <!-- WhatsApp Button CSS ve JavaScript -->
-    <link rel="stylesheet" href="../whatsapp.css">
-    <script defer src="../whatsapp.js"></script>
+    <link rel="stylesheet" href="../whatsapp.css?v=1.1">
+    <script defer src="../whatsapp.js?v=1.1"></script>
     
     <base href="/">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="footer.css">
-    <script defer src="footer.js"></script>
+    <link rel="stylesheet" href="footer.css?v=1.3">
+    <script defer src="footer.js?v=1.1"></script>
     <link rel="stylesheet" href="navbar.css">
-    <script defer src="navbar.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/whatsapp.css">
+<script defer src="/whatsapp.js"></script>
+    
+    
+    <!-- Önbellek kontrolü - Tarayıcıya içeriği her zaman yeniden yüklemesini söyler -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <style>
 
     /*tablo css*/
@@ -226,19 +234,17 @@ tr:nth-child(even) {
     </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo"> <img src="images/logo.png" alt=""></div>
+    <nav class="navbar" aria-label="Ana Navigasyon">
+        <div class="logo"> <img src="images/logo.png" alt="Dil ve Konuşma Terapisi Merkezi Logo"></div>
         <ul class="nav-links">
             <li><a href="/">Anasayfa</a></li>
             <li><a href="hakkimizda/">Hakkımızda</a></li>
             <li><a href="hizmetler/">Hizmetler</a></li>
-            <li><a href="iletisim/">İletişim</a></li>            
+            <li><a href="iletisim/">İletişim</a></li>   
+            <li><a href="teleterapi/">Online Terapi</a></li>         
         </ul>
-        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+        <div class="menu-toggle" onclick="toggleMenu()" aria-label="Menüyü aç/kapat">&#9776;</div>
     </nav>
-    <br>
-
-
     <div class="hero">Gecikmiş Dil ve Konuşma Hakkında</div>
     <div class="spacer"></div>
     <div class="container">

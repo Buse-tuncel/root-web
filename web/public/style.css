@@ -222,51 +222,31 @@ body {
     }
 }
 
-/* Navbar stil - artık navbar.css'de olduğu için kaldırıldı */
 
-/* Hero Slider - Ana Tanım */
+
+/* Hero Slider */
 .hero {
     position: relative;
     width: 100%;
-    height: 80vh !important;
+    height: 80vh;
     overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-    text-align: center;
-    margin-top: 20px;
+    margin-top: 80px;
 }
 
-/* Genel Stil */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f9fa;
-    text-align: center;
-}
-
-/* Slayt Container */
 .slider-container {
     position: relative;
     width: 100%;
-    height: 80vh !important;
-    max-width: 1400px; /* Maksimum genişlik */
-    margin: 0 auto; /* Merkezde */
-    z-index: 1; /* Navbar'ın altında kalması için düşük z-index */
+    height: 100%;
 }
 
-/* Slayt Bireysel */
 .slide {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 80vh !important;
+    height: 100%;
     opacity: 0;
-    transition: opacity 1.2s ease;
+    transition: opacity 0.5s ease;
     background-size: cover;
     background-position: center;
 }
@@ -275,68 +255,33 @@ body {
     opacity: 1;
 }
 
-/* Slayt İçeriği - Profesyonel medikal site tarzında */
 .slide-text {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 800px;
     text-align: center;
     color: white;
-    z-index: 2;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px 40px 20px 20px;
+    border-radius: 10px;
 }
 
-.slide-text h1 {
-    font-size: 38px;
-    margin: 0;
-    font-weight: 700;
-    text-shadow: 1px 1px 2px rgba(247, 247, 247, 0.5);
-    margin-bottom: 20px;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.5s ease 0.3s;
+.slide-text h1,
+.slide-text h2 {
+    margin: 0 0 15px 0;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(233, 224, 224, 0.5);
 }
 
 .slide-text p {
-    font-size: 20px;
-    margin-top: 15px;
-    line-height: 1.6;
-    text-shadow: 1px 1px 2px rgba(218, 215, 215, 0.5);
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.5s ease 0.5s;
+    margin: 0;
+    font-size: 1.2em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-.slide-text a {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 30px;
-    background-color: #fff;
-    color: rgb(95, 158, 93);
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: bold;
-    font-size: 18px;
-    transition: all 0.3s ease;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.5s ease 0.7s;
-}
-
-.slide-text a:hover {
-    background-color: #f8f8f8;
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(225, 220, 220, 0.2);
-}
-
-.slide.active .slide-text h1,
-.slide.active .slide-text p,
-.slide.active .slide-text a {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Ok Butonları - Medikal site tarzında */
 .prev, .next {
     position: absolute;
     top: 50%;
@@ -347,23 +292,12 @@ body {
     cursor: pointer;
     border: none;
     font-size: 24px;
-    z-index: 3;
-    transition: background-color 0.3s;
+    z-index: 10;
 }
 
-.prev:hover, .next:hover {
-    background: rgba(0, 0, 0, 0.8);
-}
+.prev { left: 20px; }
+.next { right: 20px; }
 
-.prev {
-    left: 20px;
-}
-
-.next {
-    right: 20px;
-}
-
-/* İndikatör Noktaları */
 .slider-indicators {
     position: absolute;
     bottom: 20px;
@@ -371,7 +305,7 @@ body {
     transform: translateX(-50%);
     display: flex;
     gap: 10px;
-    z-index: 3;
+    z-index: 10;
 }
 
 .indicator {
@@ -380,98 +314,29 @@ body {
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.5);
     cursor: pointer;
-    transition: background-color 0.3s;
 }
 
 .indicator.active {
     background: white;
 }
 
-/* Responsive */
-@media (max-width: 992px) {
-    .hero, .slider-container, .slide {
-        height: 70vh !important;
-    }
-    
-    .slide-text {
-        max-width: 80%;
-        padding: 25px 35px;
-    }
-    
-    .slide-text h1 {
-        font-size: 32px;
-    }
-}
-
 @media (max-width: 768px) {
-    .hero, .slider-container, .slide {
-        height: 60vh !important;
+    .hero {
+        height: 60vh;
     }
     
     .slide-text {
-        max-width: 90%;
-        padding: 20px 25px;
+        width: 90%;
+        padding: 15px;
     }
     
-    .slide-text h1 {
-        font-size: 28px;
-        margin-bottom: 10px;
+    .slide-text h1,
+    .slide-text h2 {
+        font-size: 2em;
     }
     
     .slide-text p {
-        font-size: 16px;
-        margin-top: 10px;
-    }
-    
-    .slide-text a {
-        font-size: 16px;
-        padding: 8px 20px;
-        margin-top: 15px;
-    }
-
-    .prev, .next {
-        width: 40px;
-        height: 40px;
-        font-size: 18px;
-    }
-    
-    .prev {
-        left: 15px;
-    }
-    
-    .next {
-        right: 15px;
-    }
-    
-    .indicator {
-        width: 8px;
-        height: 8px;
-    }
-}
-
-/* Küçük Ekranlar İçin */
-@media (max-width: 480px) {
-    .hero, .slider-container, .slide {
-        height: 50vh !important;
-    }
-    
-    .slide-text h1 {
-        font-size: 24px;
-    }
-
-    .slide-text p {
-        font-size: 14px;
-    }
-    
-    .slide-text a {
-        font-size: 14px;
-        padding: 8px 15px;
-    }
-    
-    .prev, .next {
-        width: 35px;
-        height: 35px;
-        font-size: 16px;
+        font-size: 1em;
     }
 }
 
@@ -525,24 +390,24 @@ body {
         align-items: center;
     }
 }
+
 /* Genel Stil */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f8f9fa;
-
 }
 
 /* Slayt İçeriği */
 .slide-text {
     position: absolute;
-    bottom: 20%;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     text-align: center;
     color: white;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(231, 230, 230, 0.6);
     padding: 20px;
     border-radius: 10px;
 }
@@ -600,47 +465,12 @@ body {
         padding: 10px;
     }
 }
-HAKKIMIZDA 
+
 /* Genel Stil */
 body {
     margin: 0;
     font-family: "Arial", sans-serif;
     background-color: #f4f4f4;
-}
-/* Mobil Menü İçin Hamburger Butonu */
-.menu-toggle {
-    font-size: 28px;
-    color: white;
-    cursor: pointer;
-    display: none;
-}
-
-/* Mobil Menü */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        background-color: #5f9e5d;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 100%;
-        text-align: center;
-        padding: 20px 0;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-}
-/* Menüden sonra boşluk bırak */
-.navbar {
-    height: 50px; /* Menünün yüksekliği */
-    line-height: 50px;
 }
 
 .body-content {
@@ -648,10 +478,9 @@ body {
     padding: 20px;
 }
 
-
 /* Hero Bölümü */
 .hero-overlay {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(249, 244, 244, 0.5);
     width: 100%;
     height: 100%;
     display: flex;
@@ -685,49 +514,6 @@ body {
     font-size: 18px;
     max-width: 800px;
     margin: 0 auto;
-}
-
-/* Footer Genel Stil */
-.footer {
-    background-color:rgb(95, 158, 93);
-    color: white;
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.footer-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    max-width: 1000px;
-    margin: auto;
-}
-
-.footer-info,
-.footer-cta {
-    max-width: 400px;
-}
-
-.footer-info h3,
-.footer-cta h3 {
-    font-size: 22px;
-    margin-bottom: 10px;
-    color: #ffcc00;
-}
-
-.footer-info p,
-.footer-cta p {
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-
-.footer-info a {
-    color: #ffcc00;
-    text-decoration: none;
-}
-
-.footer-info a:hover {
-    text-decoration: underline;
 }
 
 /* Randevu Butonu */
@@ -880,7 +666,6 @@ h1 {
     margin-bottom: 20px;
 }
 
-
 /* Genel Stiller */
 * {
     margin: 0;
@@ -896,7 +681,7 @@ h1 {
     gap: 20px;
     padding: 20px;
 }
-/* İletişimm
+
 /* Harita Alanı */
 .map {
     width: 100%;
@@ -974,8 +759,8 @@ h1 {
         height: 150px;
     }
 }
-/* harita başlık css */
 
+/* harita başlık css */
 .location-info {
     text-align: center;
     background: #f8f8f8;
@@ -996,5 +781,7 @@ h1 {
     color: #555;
     font-size: 18px;
 }
+
+
 
 

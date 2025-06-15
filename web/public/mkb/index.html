@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
+    <!-- Önbellek kontrolü - Tarayıcıya içeriği her zaman yeniden yüklemesini söyler -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Motor Konuşma Bozuklukları Hakkında | Dizartri ve Apraksi</title>
     <meta name="description" content="Motor konuşma bozuklukları, dizartri ve apraksi nedir, nedenleri, belirtileri ve tedavi yöntemleri. Uzman terapistlerimizden profesyonel terapi hizmetleri.">
@@ -66,9 +69,11 @@
     <link rel="stylesheet" href="footer.css">
     <script defer src="footer.js"></script>
     <link rel="stylesheet" href="navbar.css">
-    <script defer src="navbar.js"></script>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="whatsapp.css">
-    <script defer src="whatsapp.js"></script>
+    <script defer src="navbar.js"></script>
+    <script defer src="/whatsapp.js"></script>
+
     <style>
 
 body {
@@ -245,7 +250,9 @@ tr:hover {
             <li><a href="/">Anasayfa</a></li>
             <li><a href="hakkimizda/">Hakkımızda</a></li>
             <li><a href="hizmetler/">Hizmetler</a></li>
-            <li><a href="iletisim/">İletişim</a></li>            
+            <li><a href="iletisim/">İletişim</a></li>           
+            <li><a href="teleterapi/">Online Terapi</a></li>         
+
         </ul>
         <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
     </nav>
@@ -260,7 +267,7 @@ tr:hover {
             Afazi, beynin dil ve konuşma işlevlerini yöneten bölgelerinde meydana gelen hasar sonucu oluşan edinilmiş bir dil bozukluğudur. Bu durum, bireyin konuşma, anlama, okuma ve yazma gibi dilsel becerilerini etkileyebilir. Afazi genellikle inme (felç), kafa travması, beyin tümörleri, nörodejeneratif hastalıklar veya beyin enfeksiyonları sonucu ortaya çıkar.
         </p>
         <div class="image-section">
-            <img src="images/noron.jpg" alt="Kekemelik">
+            <img src="https://firebasestorage.googleapis.com/v0/b/web-site-ea83e.firebasestorage.app/o/web-images%2Fnoron.jpg?alt=media" alt="Kekemelik">
             <img src="images/mkb.jpg" alt="Beyin ve Konuşma">
         </div>
         <h2>Konuşma Apraksisi</h2>
@@ -348,6 +355,8 @@ tr:hover {
         function scrollToTop() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
+    
+
     </script>
 </body>
 </html>

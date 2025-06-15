@@ -16,44 +16,82 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/logo.png">
     
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9XQBVB710B"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+    
+    <!-- CSS dosyaları önce yüklenmeli -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="/whatsapp.css">
+<script defer src="/whatsapp.js"></script>
+<script defer src="navbar.js"></script>
 
-      gtag('config', 'G-9XQBVB710B');
-    </script>
+
     
-    <!-- CSS Dosyaları - Önbellekten kaçınmak için sürüm parametresi ekliyoruz -->
-    <link rel="stylesheet" href="style.css?v=1.1">
-    <link rel="stylesheet" href="navbar.css?v=1.1">
-    <link rel="stylesheet" href="footer.css?v=1.1">
-    <link rel="stylesheet" href="whatsapp.css?v=1.1">
-    
-    <!-- JS Dosyaları - Önbellekten kaçınmak için sürüm parametresi ekliyoruz -->
-    <script defer src="navbar.js?v=1.1"></script>
-    <script defer src="footer.js?v=1.1"></script>
-    <script defer src="whatsapp.js?v=1.1"></script>
-    
-    <!-- Önbellek temizleme script -->
-    <script>
-      // Sayfaya her girişte CSS dosyalarını yeniden yükler
-      document.addEventListener("DOMContentLoaded", function() {
-        const links = document.querySelectorAll('link[rel="stylesheet"]');
-        links.forEach(link => {
-          const url = new URL(link.href);
-          url.searchParams.set('refresh', Date.now());
-          link.href = url.toString();
-        });
+    <style>
         
-        // Açılır menü işlevselliğini kontrol et
-        if (typeof toggleMenu !== 'function') {
-          console.error("toggleMenu fonksiyonu bulunamadı! navbar.js dosyası yüklenemiyor olabilir.");
+        /* Özel hakkımızda sayfası stilleri */
+        .profile-section {
+            margin: 50px 0;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
         }
-      });
-    </script>
+        
+        .profile-content {
+            display: grid;
+            grid-template-columns: 380px 1fr;
+            gap: 30px;
+            padding: 40px;
+            align-items: center;
+        }
+        
+        .profile-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: auto;
+        }
+        
+        .profile-img {
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #2C5282;
+            box-shadow: 0 8px 20px rgba(44, 82, 130, 0.2);
+        }
+        
+        @media (max-width: 768px) {
+            .profile-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 0;
+                padding: 20px;
+            }
+            
+            .profile-info {
+                padding: 0;
+            }
+            
+            .profile-info h2, .profile-info h3 {
+                text-align: center;
+            }
+            
+            .profile-img {
+                width: 280px;
+                height: 280px;
+                margin: 0 auto 20px;
+            }
+        }
+    
+    </style>
+    
+   
+    <!-- JS Dosyaları - Önbellekten kaçınmak için sürüm parametresi ekliyoruz -->
+    <script defer src="navbar.js?v=1.2"></script>
+    <script defer src="footer.js?v=1.2"></script>
+    <script defer src="whatsapp.js?v=1.2"></script>
     
     <!-- Slider için JavaScript -->
     <script>
@@ -133,229 +171,9 @@
           startSlideShow();
       });
     </script>
-    
-    <style>
-        .profile-section {
-            margin: 50px 0;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-        }
-        
-        .profile-content {
-            display: grid;
-            grid-template-columns: 380px 1fr;
-            gap: 30px;
-            padding: 40px;
-            align-items: center;
-        }
-        
-        .profile-image {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: auto;
-        }
-        
-        .profile-img {
-            width: 320px;
-            height: 320px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid #2C5282;
-            box-shadow: 0 8px 20px rgba(44, 82, 130, 0.2);
-        }
-        
-        @media (max-width: 768px) {
-            .profile-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-                gap: 0;
-                padding: 20px;
-            }
-            
-            .profile-info {
-                padding: 0;
-            }
-            
-            .profile-info h2, .profile-info h3 {
-                text-align: center;
-            }
-            
-            .profile-img {
-                width: 280px;
-                height: 280px;
-                margin: 0 auto 20px;
-            }
-        }
-        
-        /* Navbar stilleri */
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #F7F7F7;
-            padding: 10px 20px;
-            height: 80px;
-            position: relative;
-            z-index: 1000;
-        }
-
-        .navbar .logo {
-            padding-left: 10px;
-        }
-
-        .navbar .logo img {
-            height: 60px;
-            width: auto;
-            vertical-align: middle;
-        }
-
-        .nav-links {
-            list-style: none;
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            padding-right: 10px;
-            margin: 0;
-            height: 100%;
-        }
-
-        .nav-links li {
-            display: flex;
-            align-items: center;
-            height: 100%;
-            padding: 0;
-        }
-
-        .nav-links a {
-            color: #2C5282;
-            text-decoration: none;
-            font-size: 18px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0 12px;
-            transition: all 0.3s ease;
-            border-radius: 8px;
-            margin-top: 20px;
-            transform-origin: center;
-            font-weight: 500;
-        }
-
-        .nav-links a:hover {
-            color: #4299E1;
-            background-color: rgba(44, 82, 130, 0.1);
-            transform: scale(1.05);
-        }
-
-        .menu-toggle {
-            font-size: 28px;
-            color: #2C5282;
-            cursor: pointer;
-            display: none;
-            padding: 5px 10px;
-            border-radius: 5px;
-        }
-
-        /* Overlay - Açılır menü ile slider karışmasını önlemek için */
-        .menu-overlay {
-            display: none;
-            position: fixed;
-            top: 80px;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 998;
-        }
-        
-        .menu-overlay.active {
-            display: block;
-        }
-
-        @media (max-width: 768px) {
-            .navbar {
-                padding: 10px 15px;
-            }
-            
-            .navbar .logo {
-                padding-left: 0;
-            }
-            
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                background-color: #2C5282;
-                position: absolute;
-                top: 80px;
-                left: 0;
-                right: 0;
-                width: 100%;
-                text-align: center;
-                padding: 0;
-                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-                z-index: 999;
-                border-radius: 0 0 10px 10px;
-            }
-
-            .nav-links li {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-            }
-
-            .nav-links a {
-                color: white;
-                width: 100%;
-                padding: 15px 0;
-                margin: 0;
-                border-radius: 0;
-                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            }
-            
-            .nav-links a:hover {
-                background-color: rgba(255, 255, 255, 0.1);
-                color: white;
-                transform: none;
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-
-            .menu-toggle {
-                display: block;
-            }
-        }
-        
-        /* Hero bölümü için z-index ayarı */
-        .hero {
-            position: relative;
-            width: 100%;
-            height: 80vh !important;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-            text-align: center;
-            margin-top: 0;
-            z-index: 1;
-        }
-        
-        /* Slider alanının z-index'i */
-        .slider-container {
-            position: relative;
-            z-index: 2;
-        }
-    </style>
 </head>
 <body>
-    <header>
+
         <nav class="navbar" aria-label="Ana Navigasyon">
             <div class="logo"> <img src="images/logo.png" alt="Dil ve Konuşma Terapisi Merkezi Logo"></div>
             <ul class="nav-links">
@@ -367,72 +185,40 @@
             </ul>
             <div class="menu-toggle" onclick="toggleMenu()" aria-label="Menüyü aç/kapat">&#9776;</div>
         </nav>
+        <br>
+        <br>
+        <br>
         
-        <!-- Menü overlay elemanı ekle -->
-        <div class="menu-overlay" onclick="toggleMenu()"></div>
-    </header>
-    
-    <!-- Mobil menü işlevselliği için inline script -->
-    <script>
-      // Mobil menü için toggle fonksiyonu
-      function toggleMenu() {
-          var menu = document.querySelector(".nav-links");
-          var menuToggle = document.querySelector(".menu-toggle");
-          var overlay = document.querySelector(".menu-overlay");
-          
-          menu.classList.toggle("active"); // Menüyü aç/kapa
-          overlay.classList.toggle("active"); // Overlay'i aç/kapa
-          
-          // Menü açıkken arka planı değiştir
-          if (menu.classList.contains("active")) {
-              menuToggle.style.backgroundColor = "#2C5282";
-              menuToggle.style.color = "white";
-          } else {
-              menuToggle.style.backgroundColor = "transparent";
-              menuToggle.style.color = "#2C5282";
-          }
-          
-          // Sayfa kaydırıldığında menüyü kapat
-          document.addEventListener('scroll', function() {
-              if (menu.classList.contains("active")) {
-                  menu.classList.remove("active");
-                  overlay.classList.remove("active");
-                  menuToggle.style.backgroundColor = "transparent";
-                  menuToggle.style.color = "#2C5282";
-              }
-          }, {once: true});
-      }
-    </script>
-
+        
     <header class="hero">
         <div class="slider-container">
             <div class="slide active" style="background-image: url('images/dis.jpeg');">
                 <div class="slide-text">
-                    <h1>Hakkımızda</h1>
+                    <h2>Hakkımızda</h2>
                     <p>Modern ve Konforlu Kliniğimiz</p>
                 </div>
             </div>
             <div class="slide" style="background-image: url('images/oyun.jpeg');">
                 <div class="slide-text">
-                    <h1>Uzman Kadromuz</h1>
+                    <h2>Uzman Kadromuz</h2>
                     <p>Deneyimli Terapistlerimizle Yanınızdayız</p>
                 </div>
             </div>
             <div class="slide" style="background-image: url('images/bekleme.jpeg');">
                 <div class="slide-text">
-                    <h1>Ferah Ortam</h1>
+                    <h2>Ferah Ortam</h2>
                     <p>Rahat ve Huzurlu Bir Terapi Deneyimi</p>
                 </div>
             </div>
             <div class="slide" style="background-image: url('images/hayat.jpeg');">
                 <div class="slide-text">
-                    <h1>Kaliteli Hizmet</h1>
+                    <h2>Kaliteli Hizmet</h2>
                     <p>Güvenilir ve Profesyonel Yaklaşım</p>
                 </div>
             </div>
             <div class="slide" style="background-image: url('images/resep.jpeg');">
                 <div class="slide-text">
-                    <h1>Resepsiyon</h1>
+                 
                     <p>Güler Yüzlü Karşılama ve Profesyonel Hizmet</p>
                 </div>
             </div>

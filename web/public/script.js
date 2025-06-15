@@ -14,13 +14,51 @@ document.addEventListener("DOMContentLoaded", function () {
         if (isAnimating) return;
         isAnimating = true;
         
+        // Önceki slaytı gizle
         slides[currentSlide].classList.remove("active");
         indicators[currentSlide].classList.remove("active");
         
+        // Yeni slaytı göster
         currentSlide = index;
-        
         slides[currentSlide].classList.add("active");
         indicators[currentSlide].classList.add("active");
+        
+        // Slayt metinlerini göster
+        const slideTexts = slides[currentSlide].querySelectorAll(".slide-text h1, .slide-text h2, .slide-text p");
+        slideTexts.forEach(text => {
+            text.style.opacity = "1";
+            text.style.transform = "none";
+            text.style.visibility = "visible";
+            text.style.display = "block";
+            text.style.position = "relative";
+            text.style.left = "0";
+            text.style.right = "0";
+            text.style.transition = "opacity 0.5s ease";
+            text.style.textAlign = "center";
+            text.style.width = "100%";
+            text.style.margin = "0 auto";
+            text.style.padding = "0";
+        });
+        
+        // Slayt metin container'ını ortala
+        const slideTextContainer = slides[currentSlide].querySelector(".slide-text");
+        if (slideTextContainer) {
+            slideTextContainer.style.position = "absolute";
+            slideTextContainer.style.top = "50%";
+            slideTextContainer.style.left = "50%";
+            slideTextContainer.style.transform = "translate(-50%, -50%)";
+            slideTextContainer.style.width = "90%";
+            slideTextContainer.style.maxWidth = "800px";
+            slideTextContainer.style.margin = "0 auto";
+            slideTextContainer.style.padding = "30px";
+            slideTextContainer.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+            slideTextContainer.style.borderRadius = "15px";
+            slideTextContainer.style.backdropFilter = "blur(5px)";
+            slideTextContainer.style.display = "flex";
+            slideTextContainer.style.flexDirection = "column";
+            slideTextContainer.style.alignItems = "center";
+            slideTextContainer.style.justifyContent = "center";
+        }
         
         setTimeout(() => {
             isAnimating = false;
@@ -74,6 +112,8 @@ document.addEventListener("DOMContentLoaded", function () {
     sliderContainer.addEventListener("mouseenter", stopSlideshow);
     sliderContainer.addEventListener("mouseleave", startSlideshow);
     
+    // İlk slaytı göster
+    showSlide(0);
     startSlideshow();
 });
 

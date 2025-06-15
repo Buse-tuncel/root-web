@@ -35,6 +35,10 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="footer-copy">
             © ${new Date().getFullYear()} Dil ve Konuşma Terapisi. Tüm hakları saklıdır.
         </div>
+        <footer style="text-align: center; margin: 50px 0;">
+  <p><a href="/privacy-policy.html">Gizlilik Politikası</a></p>
+</footer>
+
     `;
 
     // Font Awesome CDN'ini dinamik olarak ekle

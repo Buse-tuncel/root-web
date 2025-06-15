@@ -23,157 +23,15 @@
 
       gtag('config', 'G-9XQBVB710B');
     </script>
-    
-    <link rel="stylesheet" href="style.css?v=1.1">
-    <link rel="stylesheet" href="navbar.css?v=1.1">
-    <link rel="stylesheet" href="footer.css?v=1.1">
-    <link rel="stylesheet" href="whatsapp.css?v=1.1">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="whatsapp.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <script defer src="navbar.js?v=1.1"></script>
-    <script defer src="footer.js?v=1.1"></script>
-    <script defer src="whatsapp.js?v=1.1"></script>
+    <script defer src="navbar.js"></script>
+    <script defer src="footer.js"></script>
+    <script defer src="/whatsapp.js"></script>
     <style>
-        /* Navbar stilleri */
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #F7F7F7;
-            padding: 10px 20px;
-            height: 80px;
-            position: relative;
-            z-index: 1000;
-        }
-
-        .navbar .logo {
-            padding-left: 10px;
-        }
-
-        .navbar .logo img {
-            height: 60px;
-            width: auto;
-            vertical-align: middle;
-        }
-
-        .nav-links {
-            list-style: none;
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            padding-right: 10px;
-            margin: 0;
-            height: 100%;
-        }
-
-        .nav-links li {
-            display: flex;
-            align-items: center;
-            height: 100%;
-            padding: 0;
-        }
-
-        .nav-links a {
-            color: #2C5282;
-            text-decoration: none;
-            font-size: 18px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0 12px;
-            transition: all 0.3s ease;
-            border-radius: 8px;
-            margin-top: 20px;
-            transform-origin: center;
-            font-weight: 500;
-        }
-
-        .nav-links a:hover {
-            color: #4299E1;
-            background-color: rgba(44, 82, 130, 0.1);
-            transform: scale(1.05);
-        }
-
-        .menu-toggle {
-            font-size: 28px;
-            color: #2C5282;
-            cursor: pointer;
-            display: none;
-            padding: 5px 10px;
-            border-radius: 5px;
-        }
-
-        /* Overlay - Açılır menü ile slider karışmasını önlemek için */
-        .menu-overlay {
-            display: none;
-            position: fixed;
-            top: 80px;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 998;
-        }
-        
-        .menu-overlay.active {
-            display: block;
-        }
-
-        @media (max-width: 768px) {
-            .navbar {
-                padding: 10px 15px;
-            }
-            
-            .navbar .logo {
-                padding-left: 0;
-            }
-            
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                background-color: #2C5282;
-                position: absolute;
-                top: 80px;
-                left: 0;
-                right: 0;
-                width: 100%;
-                text-align: center;
-                padding: 0;
-                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-                z-index: 999;
-                border-radius: 0 0 10px 10px;
-            }
-
-            .nav-links li {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-            }
-
-            .nav-links a {
-                color: white;
-                width: 100%;
-                padding: 15px 0;
-                margin: 0;
-                border-radius: 0;
-                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            }
-            
-            .nav-links a:hover {
-                background-color: rgba(255, 255, 255, 0.1);
-                color: white;
-                transform: none;
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-
-            .menu-toggle {
-                display: block;
-            }
-        }
-        
         /* İletişim sayfası stilleri */
         .location-info {
             display: flex;
@@ -327,6 +185,14 @@
             </ul>
             <div class="menu-toggle" onclick="toggleMenu()" aria-label="Menüyü aç/kapat">&#9776;</div>
         </nav>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
         
         <!-- Menü overlay elemanı ekle -->
         <div class="menu-overlay" onclick="toggleMenu()"></div>
@@ -383,13 +249,13 @@
             <h3>Kliniğimizden Görüntüler</h3>
             <div class="gallery-container">
                 <div class="gallery">
-                    <img src="images/bina.jpeg" alt="Klinik 1" onclick="openLightbox(this)">
-                    <img src="images/oyun.jpeg" alt="Klinik 2" onclick="openLightbox(this)">
-                    <img src="images/bekleme.jpeg" alt="Klinik 3" onclick="openLightbox(this)">
-                    <img src="images/hayat.jpeg" alt="Klinik 4" onclick="openLightbox(this)">
-                    <img src="images/dis.jpeg" alt="Klinik 5" onclick="openLightbox(this)">
-                    <img src="images/resep.jpeg" alt="Klinik 6" onclick="openLightbox(this)">
-                    <img src="images/ot.jpeg" alt="Klinik 7" onclick="openLightbox(this)">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/web-site-ea83e.firebasestorage.app/o/web-images%2Fbina.jpeg?alt=media" alt="Klinik 1" onclick="openLightbox(this)">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/web-site-ea83e.firebasestorage.app/o/web-images%2Foyun.jpeg?alt=media" alt="Klinik 2" onclick="openLightbox(this)">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/web-site-ea83e.firebasestorage.app/o/web-images%2Fbekleme.jpeg?alt=media" alt="Klinik 3" onclick="openLightbox(this)">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/web-site-ea83e.firebasestorage.app/o/web-images%2Fhayat.jpeg?alt=media" alt="Klinik 4" onclick="openLightbox(this)">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/web-site-ea83e.firebasestorage.app/o/web-images%2Fdis.jpeg?alt=media" alt="Klinik 5" onclick="openLightbox(this)">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/web-site-ea83e.firebasestorage.app/o/web-images%2Fresep.jpeg?alt=media" alt="Klinik 6" onclick="openLightbox(this)">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/web-site-ea83e.firebasestorage.app/o/web-images%2Fot.jpeg?alt=media" alt="Klinik 7" onclick="openLightbox(this)">
                 </div>
             </div>
         </div>

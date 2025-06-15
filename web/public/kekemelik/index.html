@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
+    <!-- Önbellek kontrolü - Tarayıcıya içeriği her zaman yeniden yüklemesini söyler -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kekemelik Hakkında | Konuşma Akıcılığı ve Terapi Hizmetleri</title>
     <meta name="description" content="Kekemelik sorunu için uzman terapistlerimiz tarafından sunulan profesyonel konuşma terapisi hizmetleri. Akıcı konuşma için etkili tedavi yöntemleri ve destek.">
@@ -134,7 +137,7 @@
     <!-- Preload kritik kaynaklar -->
     <link rel="preload" href="../images/logo.png" as="image">
     <link rel="preload" href="brain.jpg" as="image">
-    <link rel="preload" href="../navbar.css" as="style">
+    <link rel="preload" href="navbar.css" as="style">
     
     <base href="/">
     
@@ -146,6 +149,7 @@
     <link rel="stylesheet" href="footer.css">
     <script defer src="footer.js"></script>
     <link rel="stylesheet" href="navbar.css">
+    
     <script defer src="navbar.js"></script>
     <style>
      
@@ -241,10 +245,14 @@
                 <li><a href="/">Anasayfa</a></li>
                 <li><a href="hakkimizda/">Hakkımızda</a></li>
                 <li><a href="hizmetler/">Hizmetler</a></li>
-                <li><a href="iletisim/">İletişim</a></li>            
+                <li><a href="iletisim/">İletişim</a></li> 
+                <li><a href="teleterapi/">Online Terapi</a></li>         
+
             </ul>
             <div class="menu-toggle" onclick="toggleMenu()" aria-label="Menüyü aç/kapat">&#9776;</div>
         </nav>
+        <br>
+        <br>
     </header>
     
     <!-- Breadcrumb Navigasyon -->
@@ -256,6 +264,8 @@
     
     <br>
     <div class="hero" role="banner">Kekemelik Hakkında</div>
+    <h1>Kekemelik Nedir? Belirtileri ve Terapi Yöntemleri</h1>
+
     <div class="spacer"></div>
     <main>
         <article class="container" itemscope itemtype="https://schema.org/MedicalWebPage">
@@ -267,8 +277,7 @@
                     Kekemelik, konuşmanın akıcılığında ve ritminde bozulmalarla karakterize edilen bir iletişim bozukluğudur. Bu durum, seslerin, hecelerin veya kelimelerin tekrarı, uzatılması veya konuşma sırasında duraksamalar (bloklar) şeklinde ortaya çıkar. Kekemelik, konuşmanın doğal akışını kesintiye uğratarak bireyin iletişim becerilerini ve sosyal etkileşimlerini olumsuz etkileyebilir.
                 </p>
                 <div class="image-section">
-                    <img src="images/ice.jpg" alt="Kekemelik tedavisi uygulayan terapist" itemprop="image">
-                    <img src="brain.jpg" alt="Beyin ve konuşma merkezi görseli" itemprop="image">
+                  <img src="https://firebasestorage.googleapis.com/v0/b/web-site-ea83e.firebasestorage.app/o/web-images%2Fice.jpg?alt=media" alt="Kekemelik terapisi Üsküdar konuşma terapisti">
                 </div>
             </section>
             
@@ -308,10 +317,22 @@
                         <li>Fun with Fluency</li>
                         <li>Lidcombe Programı</li>
                         <li>Cognitive Behavioral Therapy (CBT – Bilişsel Davranışçı Terapi)</li>
-                        <li>Demands and Capacities Model (DCM – Talep ve Kapasite Modeli)</li>
+                  
                         <li>Indirect Therapy (Dolaylı Terapi)</li>
                     </ul>
                 </div>
+                <section>
+                  <h2>Sıkça Sorulan Sorular</h2>
+                  <h3>Kekemelik nedir?</h3>
+                  <p>Kekemelik, konuşmanın akıcılığında ve ritminde bozulmalarla karakterize edilen bir iletişim bozukluğudur...</p>
+                
+                  <h3>Kekemeliğin nedenleri nelerdir?</h3>
+                  <p>Genetik, nörofizyolojik ve gelişimsel faktörler etkili olabilir...</p>
+                
+                  <h3>Kekemelik tedavi edilebilir mi?</h3>
+                  <p>Evet, terapi yöntemleri ile oldukça başarılı sonuçlar alınabilmektedir.</p>
+                </section>
+                
             </section>
             
             <div class="cta-buttons">

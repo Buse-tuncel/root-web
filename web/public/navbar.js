@@ -25,4 +25,15 @@ function toggleMenu() {
             menuToggle.style.color = "#2C5282";
         }
     }, {once: true});
-} 
+}
+
+// Sayfa yüklendiğinde menu-overlay elementini ekle
+document.addEventListener('DOMContentLoaded', function() {
+    var navbar = document.querySelector('.navbar');
+    if (navbar && !document.querySelector('.menu-overlay')) {
+        var overlay = document.createElement('div');
+        overlay.className = 'menu-overlay';
+        overlay.onclick = toggleMenu;
+        navbar.parentNode.insertBefore(overlay, navbar.nextSibling);
+    }
+}); 

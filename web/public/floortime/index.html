@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
+    <!-- Önbellek kontrolü - Tarayıcıya içeriği her zaman yeniden yüklemesini söyler -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DIR Floortime Terapisi Hakkında | Dil ve Konuşma Terapisi</title>
     <meta name="description" content="DIR Floortime terapisi nedir, faydaları ve uygulama yöntemleri. Otizm spektrum bozukluğu ve gelişimsel bozuklukları olan çocuklar için etkili Floortime terapi hizmetleri.">
@@ -64,12 +67,12 @@
     <base href="/">
 
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="footer.css">
-    <script defer src="footer.js"></script>
+    <link rel="stylesheet" href="footer.css?v=1.1">
+    <script defer src="footer.js?v=1.1"></script>
     <link rel="stylesheet" href="navbar.css">
     <script defer src="navbar.js"></script>
-    <link rel="stylesheet" href="whatsapp.css">
-    <script defer src="whatsapp.js"></script>
+    <link rel="stylesheet" href="/whatsapp.css">
+<script defer src="/whatsapp.js"></script>
     <style>
        
 /* Mobil Menü İçin Hamburger Butonu */
@@ -290,17 +293,25 @@
             </style>
         </head>
         <body>
-            <nav class="navbar">
+            <nav class="navbar" aria-label="Ana Navigasyon">
                 <div class="logo"> <img src="images/logo.png" alt=""></div>
                 <ul class="nav-links">
                     <li><a href="/">Anasayfa</a></li>
                     <li><a href="hakkimizda/">Hakkımızda</a></li>
                     <li><a href="hizmetler/">Hizmetler</a></li>
-                    <li><a href="iletisim/">İletişim</a></li>            
+                    <li><a href="iletisim/">İletişim</a></li>    
+                <li><a href="teleterapi/">Online Terapi</a></li>         
+
                 </ul>
                 <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
             </nav>
             <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+           
         
             <div class="hero">DIR Floortime Terapisi Hakkında</div>
             <div class="spacer"></div>

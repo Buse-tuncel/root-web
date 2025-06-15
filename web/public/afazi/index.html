@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
+    <!-- Önbellek kontrolü - Tarayıcıya içeriği her zaman yeniden yüklemesini söyler -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Afazi Hakkında | Dil ve Konuşma Terapisi</title>
     <meta name="description" content="Afazi hastalığı ve belirtileri hakkında bilgi alın. Uzman dil ve konuşma terapistlerimizden afazi için profesyonel terapi hizmetleri.">
@@ -63,12 +66,13 @@
     
     <base href="/">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="footer.css">
-    <script defer src="footer.js"></script>
+    <link rel="stylesheet" href="footer.css?v=1.1">
+    <script defer src="footer.js?v=1.1"></script>
     <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="style.css">
     <script defer src="navbar.js"></script>
-    <link rel="stylesheet" href="whatsapp.css">
-    <script defer src="whatsapp.js"></script>
+    <link rel="stylesheet" href="/whatsapp.css">
+<script defer src="/whatsapp.js"></script>
     <style>
         .body-content {
             margin-top: 80px;
@@ -217,20 +221,26 @@
     </style>
 </head>
 <body>
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Ana Navigasyon">
         <div class="logo"> <img src="images/logo.png" alt=""></div>
         <ul class="nav-links">
             <li><a href="/">Anasayfa</a></li>
             <li><a href="hakkimizda/">Hakkımızda</a></li>
             <li><a href="hizmetler/">Hizmetler</a></li>
-            <li><a href="iletisim/">İletişim</a></li>            
+            <li><a href="iletisim/">İletişim</a></li>
+            <li><a href="teleterapi/">Online Terapi</a></li>         
+
         </ul>
         <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
     </nav>
     <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
 
-
-    <div class="hero">Afazi Hakkında</div>
+<h1>Afazi Nedir? Belirtileri ve Konuşma Terapisi ile Tedavisi</h1>
     <div class="spacer"></div>
     <div class="container">
         <h2>Afazi Nedir?</h2>
@@ -238,7 +248,7 @@
             Afazi, beynin dil ve konuşma işlevlerini yöneten bölgelerinde meydana gelen hasar sonucu oluşan edinilmiş bir dil bozukluğudur. Bu durum, bireyin konuşma, anlama, okuma ve yazma gibi dilsel becerilerini etkileyebilir. Afazi genellikle inme (felç), kafa travması, beyin tümörleri, nörodejeneratif hastalıklar veya beyin enfeksiyonları sonucu ortaya çıkar.
         </p>
         <div class="image-section">
-            <img src="images/aphasia.jpg" alt="Kekemelik">
+            <img src="images/aphasia.jpg" alt="Afazi tedavisi, Üsküdar konuşma terapisi">
             <img src="images/aphasia1.jpg" alt="Beyin ve Konuşma">
         </div>
         <h2>Afazinin Sebepleri</h2>
@@ -272,6 +282,13 @@
             <li> Psikolojik ve sosyal desteği sağlamak</p>
 
         </p>
+
+        <h2>Sıkça Sorulan Sorular</h2>
+<h3>Afazi tamamen geçer mi?</h3>
+<p>Afazinin şiddetine ve tedaviye ne kadar erken başlandığına bağlıdır. Erken ve yoğun terapi ile büyük ilerlemeler mümkündür.</p>
+<h3>Afazi ile yaşayan bireyler konuşmayı öğrenebilir mi?</h3>
+<p>Afazi bir öğrenme problemi değil, kazanılmış bir bozukluktur. Beyin farklı yollarla iletişim kurmayı öğrenebilir.</p>
+
         <h2>Afazi Tedavisinde Kullanılan Yöntemler</h2>
         <p>
             <ul>

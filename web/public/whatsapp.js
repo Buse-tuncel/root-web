@@ -1,18 +1,7 @@
 // WhatsApp butonu oluşturma fonksiyonu
 function createWhatsAppButton() {
-    // CSS dosyasını kontrol et ve yoksa ekle
-    if (!document.querySelector('link[href*="whatsapp.css"]')) {
-        const cssLink = document.createElement('link');
-        cssLink.rel = 'stylesheet';
-        cssLink.href = '/whatsapp.css'; // Ana dizinden başlayarak
-        document.head.appendChild(cssLink);
-    }
-
-    // Eğer buton zaten oluşturulmuşsa tekrar oluşturma
-    if (document.querySelector('.whatsapp-button')) {
-        return;
-    }
-
+    console.log('WhatsApp butonu oluşturuluyor...');
+    
     // WhatsApp butonu oluştur
     const whatsappButton = document.createElement('a');
     whatsappButton.href = 'https://wa.me/905362280636';
@@ -29,31 +18,32 @@ function createWhatsAppButton() {
 
     // Butonu sayfaya ekle
     document.body.appendChild(whatsappButton);
+    console.log('WhatsApp butonu sayfaya eklendi');
+
+    // Yanıp sönme animasyonunu başlat
+    startBlinking(whatsappButton);
+    console.log('Yanıp sönme animasyonu başlatıldı');
+}
+
+// Yanıp sönme animasyonu fonksiyonu
+function startBlinking(button) {
+    let isFaded = false;
+    setInterval(() => {
+        if (isFaded) {
+            button.style.opacity = '1';
+        } else {
+            button.style.opacity = '0.5';
+        }
+        isFaded = !isFaded;
+    }, 500);
 }
 
 // Sayfa yüklendiğinde butonu ekle
-document.addEventListener('DOMContentLoaded', createWhatsAppButton);
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', createWhatsAppButton);
+} else {
+    createWhatsAppButton();
+}
 
-// Sayfa tamamen yüklendiğinde de kontrol et (bazı durumlarda DOMContentLoaded olayı atlanabilir)
+// Sayfa tamamen yüklendiğinde de kontrol et
 window.addEventListener('load', createWhatsAppButton); 
-
-
-<button id="whatsapp-button" class="whatsapp-button">WP Butonu</button>
-
-
-    const button = document.getElementById('whatsapp-button');
-
-    function startBlinking() {
-        let isFaded = false;
-        setInterval(() => {
-            if (isFaded) {
-                button.style.opacity = '1';
-            } else {
-                button.style.opacity = '0.5';
-            }
-            isFaded = !isFaded;
-        }, 500); // 500 milisaniye aralıklarla yanıp sönme
-    }
-
-    // Sayfa yüklendiğinde animasyonu başlat
-    window.onload = startBlinking;
